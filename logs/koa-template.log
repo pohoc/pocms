@@ -1,47 +1,13 @@
-[2021-07-27T15:17:32.099] [ERROR] [Default] - Error: MongoNetworkError: failed to connect to server [127.0.0.1:27017] on first connect [Error: connect ECONNREFUSED 127.0.0.1:27017
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16) {
-  name: 'MongoNetworkError'
-}]
-    at NativeConnection.<anonymous> (E:\MyCode\Company\Kefu\models\index.js:17:18)
-    at NativeConnection.emit (events.js:315:20)
-    at E:\MyCode\Company\Kefu\node_modules\mongoose\lib\connection.js:856:30
-    at processTicksAndRejections (internal/process/task_queues.js:75:11)
-[2021-07-27T15:24:01.863] [INFO] [Default] - mongo is opened
-[2021-07-27T15:24:58.437] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 4ms
-[2021-07-27T15:24:58.443] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:25:01.579] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:25:32.026] [INFO] [Default] - GET 404 /api 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:25:40.507] [INFO] [Default] - GET 404 /login 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:25:47.675] [INFO] [Default] - GET 404 /login.html 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:27:51.991] [INFO] [Default] - GET 404 /login.html 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:27:52.660] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:27:54.410] [INFO] [Default] - GET 404 /login 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:28:48.140] [INFO] [Default] - POST 404 /login 请求参数： {} 响应参数： undefined - ::1 - 1ms
-[2021-07-27T15:31:07.126] [INFO] [Default] - POST 404 /test 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:38:56.065] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:38:58.090] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:39:07.964] [INFO] [Default] - mongo is opened
-[2021-07-27T15:39:12.286] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T15:39:22.341] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 1ms
-[2021-07-27T15:39:29.964] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:40:27.926] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:41:39.809] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T15:42:39.024] [INFO] [Default] - mongo is opened
-[2021-07-27T15:42:41.704] [INFO] [Default] - GET 200 / 请求参数： {} 响应参数： "Hello koa" - ::1 - 5ms
-[2021-07-27T15:42:43.009] [INFO] [Default] - GET 200 / 请求参数： {} 响应参数： "Hello koa" - ::1 - 0ms
-[2021-07-27T15:46:01.863] [INFO] [Default] - mongo is opened
-[2021-07-27T15:46:05.782] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T15:48:31.168] [INFO] [Default] - mongo is opened
-[2021-07-27T15:48:36.572] [INFO] [Default] - GET 200 / 请求参数： {} 响应参数： "Hello koa" - ::1 - 5ms
-[2021-07-27T15:48:38.165] [INFO] [Default] - GET 200 / 请求参数： {} 响应参数： "Hello koa" - ::1 - 1ms
-[2021-07-27T15:48:45.189] [INFO] [Default] - GET 200 / 请求参数： {} 响应参数： "Hello koa" - ::1 - 0ms
-[2021-07-27T15:50:46.083] [INFO] [Default] - GET 200 / 请求参数： {} 响应参数： "Hello koa" - ::1 - 0ms
-[2021-07-27T16:18:42.162] [INFO] [Default] - GET 200 /admin/login 请求参数： {} 响应参数： "Hello koa" - ::1 - 4ms
-[2021-07-27T16:18:44.164] [INFO] [Default] - GET 200 /admin/login 请求参数： {} 响应参数： "Hello koa" - ::1 - 0ms
-[2021-07-27T16:18:45.842] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T16:18:51.743] [INFO] [Default] - GET 200 /admin/login 请求参数： {} 响应参数： "Hello koa" - ::1 - 1ms
-[2021-07-27T16:50:53.933] [ERROR] [Default] - TypeError: ctx.render is not a function
-    at admin.login (E:\MyCode\Company\Kefu\controllers\admin.js:3:15)
+[2021-07-30T08:43:00.130] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-30T08:43:00.593] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-30T08:43:02.269] [ERROR] [Default] - Mysql Connected failed
+[2021-07-30T08:43:04.856] [INFO] [Default] - GET 404 /restful/v1/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-30T08:43:11.098] [INFO] [Default] - GET 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-30T09:05:21.283] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTA3MjEsImlhdCI6MTYyNzYwNzEyMX0.pBSBiDbAFZMmCYEIBw_vDv8zqm-Fk5I5bHWSFszSbIU"} - ::1 - 260ms
+[2021-07-30T09:40:23.530] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:40:25.934] [ERROR] [Default] - ReferenceError: userModel is not defined
+    at Object.checkInfo (E:\MyCode\Company\Kefu\action\account.action.js:40:17)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:11:33)
     at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
     at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
     at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
@@ -50,83 +16,146 @@
     at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
     at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
     at cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:15)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-[2021-07-27T16:50:53.938] [INFO] [Default] - GET 200 /admin/login 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"ctx.render is not a function"} - ::1 - 8ms
-[2021-07-27T16:53:49.829] [INFO] [Default] - GET 200 /admin/login 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Document</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 8ms
-[2021-07-27T17:06:38.532] [INFO] [Default] - GET 404 /admin/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:06:43.583] [INFO] [Default] - GET 404 /restful 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T17:06:46.772] [INFO] [Default] - GET 404 /restful/v1 请求参数： {} 响应参数： undefined - ::1 - 1ms
-[2021-07-27T17:06:50.277] [INFO] [Default] - GET 200 /restful/v1/login 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Document</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 4ms
-[2021-07-27T17:09:01.349] [INFO] [Default] - GET 404 /restful/v1/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:09:34.254] [ERROR] [Default] - TypeError: ctx.body is not a function
-    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:3:7)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
-    at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:36:12
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:332:32)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-[2021-07-27T17:09:34.258] [INFO] [Default] - GET 200 /restful/v1/login 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"ctx.body is not a function"} - ::1 - 8ms
-[2021-07-27T17:10:02.274] [INFO] [Default] - GET 200 /restful/v1/login 请求参数： {} 响应参数： "1" - ::1 - 5ms
-[2021-07-27T17:10:24.915] [INFO] [Default] - GET 404 /admin 请求参数： {} 响应参数： undefined - ::1 - 2ms
-[2021-07-27T17:10:41.565] [INFO] [Default] - GET 404 /admin 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:10:56.066] [INFO] [Default] - GET 404 /admin 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:11:00.069] [INFO] [Default] - GET 404 /admin/home 请求参数： {} 响应参数： undefined - ::1 - 1ms
-[2021-07-27T17:11:01.634] [INFO] [Default] - GET 404 /admin/home 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T17:11:27.406] [INFO] [Default] - GET 404 /admin/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T17:11:29.302] [INFO] [Default] - GET 404 /admin/login 请求参数： {} 响应参数： undefined - ::1 - 1ms
-[2021-07-27T17:12:10.651] [INFO] [Default] - GET 404 /admin/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:12:57.714] [INFO] [Default] - GET 404 /admin/home 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:12:59.268] [INFO] [Default] - GET 404 /admin/home 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-27T17:13:24.585] [INFO] [Default] - GET 404 /admin/home 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:13:58.200] [INFO] [Default] - GET 404 /admin/home 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:15:07.395] [INFO] [Default] - GET 404 /admin/home 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-27T17:16:05.623] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>login</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 8ms
-[2021-07-27T17:16:42.344] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 7ms
-[2021-07-27T17:16:44.509] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 1ms
-[2021-07-27T17:23:20.917] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 5ms
-[2021-07-27T17:23:25.402] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 2ms
-[2021-07-27T17:23:44.753] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 2ms
-[2021-07-27T17:58:49.335] [ERROR] [Default] - TypeError: Cannot read property 'userinfo' of undefined
-    at adminMiddleware (E:\MyCode\Company\Kefu\middlewares\admin.js:5:41)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
-    at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:36:12
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:15)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-[2021-07-27T17:58:49.340] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'userinfo' of undefined"} - ::1 - 9ms
-[2021-07-27T17:59:28.907] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 8ms
-[2021-07-27T17:59:41.030] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  \r\n</body>\r\n</html>" - ::1 - 1ms
-[2021-07-27T18:00:11.048] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  测试内容\r\n</body>\r\n</html>" - ::1 - 1ms
-[2021-07-27T18:00:25.675] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>home</title>\r\n</head>\r\n<body>\r\n  测试内容\r\n</body>\r\n</html>" - ::1 - 8ms
-[2021-07-27T18:01:35.940] [ERROR] [Default] - TypeError: Cannot read property 'userinfo' of undefined
-    at adminMiddleware (E:\MyCode\Company\Kefu\middlewares\admin.js:5:19)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
-    at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:36:12
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:15)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-[2021-07-27T18:01:35.944] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'userinfo' of undefined"} - ::1 - 9ms
-[2021-07-27T18:03:38.702] [ERROR] [Default] - TypeError: Cannot read property 'token' of undefined
-    at adminMiddleware (E:\MyCode\Company\Kefu\middlewares\admin.js:5:19)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
-    at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
-    at E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:36:12
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-    at cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:15)
-    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
-[2021-07-27T18:03:38.708] [INFO] [Default] - GET 200 /admin/home 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'token' of undefined"} - ::1 - 10ms
+[2021-07-30T09:40:25.936] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"userModel is not defined"} - ::1 - 12ms
+[2021-07-30T09:40:49.955] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:40:51.978] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTI4NTEsImlhdCI6MTYyNzYwOTI1MX0.V0EXbRm2mzPd1cUVEk86eGaNaSMB362YzeDEC649J98"} - ::1 - 249ms
+[2021-07-30T09:41:35.669] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:41:43.837] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:42:01.791] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:47:23.905] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:49:44.584] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:52:50.205] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:29:47.977] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:31:31.724] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:31:34.011] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:32:25.459] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:32:35.427] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:33:31.134] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:33:53.259] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTYwMzMsImlhdCI6MTYyNzYxMjQzM30.A8g34dzUdq-QdwfIVsXg9kfGSvFhpqEwd5vifeS7XvI"} - ::1 - 232ms
+[2021-07-30T10:34:53.791] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:05.398] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:30.376] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:36.559] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:38.984] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:45.836] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:36:02.575] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:36:03.737] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:47:31.707] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:50:42.262] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:51:33.689] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:52:06.773] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:54:11.961] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:15:31.677] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:15:35.428] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:15:35.430] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:16:00.945] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:16:21.192] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:16:26.056] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:16:26.058] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:16:46.740] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:16:47.998] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:16:48.001] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:17:16.569] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:18:02.409] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:18:02.412] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 3ms
+[2021-07-30T11:24:50.559] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:24:52.951] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:24:52.953] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:25:05.390] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:25:05.391] [INFO] [Default] - POST 200 / 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 1ms
+[2021-07-30T11:25:09.037] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:25:09.038] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 2ms
+[2021-07-30T11:25:39.392] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:25:47.207] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:25:47.210] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:26:53.397] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:26:55.458] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:26:55.461] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 5ms
+[2021-07-30T11:27:13.223] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:27:15.385] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:27:15.388] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 3ms
+[2021-07-30T11:27:31.570] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:27:33.112] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTkyNTMsImlhdCI6MTYyNzYxNTY1M30.gZyvwxaDGd1sKqLUF2W_T3oUA3b18hSGS6zhZEgJgnU"} - ::1 - 240ms
+[2021-07-30T11:29:03.152] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:05.685] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:05.688] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:29:14.795] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:15.067] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:15.069] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:29:16.041] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:16.042] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 1ms
+[2021-07-30T11:29:28.535] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:28.902] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:28.905] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:29:51.130] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:57.152] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTkzOTcsImlhdCI6MTYyNzYxNTc5N30.xwVxA2s8PMKFnAbY-wGiCStNzRaoqhrJD68ZKyT4kMo"} - ::1 - 275ms

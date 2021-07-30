@@ -1,0 +1,200 @@
+[2021-07-29T08:23:57.708] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-29T08:23:58.019] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-29T09:48:18.292] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-29T09:48:28.538] [INFO] [Default] - GET 404 /restful/api 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-29T09:48:38.067] [INFO] [Default] - GET 404 /restful/api/login 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-07-29T09:48:39.620] [INFO] [Default] - GET 404 /restful/api/login 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-07-29T09:49:21.535] [INFO] [Default] - GET 404 /restful/api/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-29T09:49:29.458] [INFO] [Default] - GET 404 /restful/api/account/login 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-07-29T09:51:13.121] [INFO] [Default] - GET 404 /restful/api/account/login 请求参数： {} 响应参数： undefined - ::1 - 4ms
+[2021-07-29T09:56:42.138] [INFO] [Default] - GET 404 /restful/api/account/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-29T09:57:47.128] [INFO] [Default] - GET 404 /restful/api/account/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-29T09:58:42.868] [INFO] [Default] - GET 404 /restful/api/account/login 请求参数： {} 响应参数： undefined - ::1 - 5ms
+[2021-07-29T09:58:51.239] [INFO] [Default] - GET 200 /restful/v1/account/login 请求参数： {} 响应参数： "1" - ::1 - 1ms
+[2021-07-29T09:59:09.855] [INFO] [Default] - GET 200 /restful/v1/account/login 请求参数： {} 响应参数： "1" - ::1 - 4ms
+[2021-07-29T10:09:22.801] [INFO] [Default] - GET 200 /restful/v1/account/login 请求参数： {} 响应参数： "1" - ::1 - 5ms
+[2021-07-29T10:09:29.060] [ERROR] [Default] - Mysql Connected failed
+[2021-07-29T10:10:20.337] [ERROR] [Default] - Mysql Connected failed
+[2021-07-29T10:12:40.240] [INFO] [Default] - GET 200 /restful/v1/account/login 请求参数： {} 响应参数： "1" - ::1 - 3ms
+[2021-07-29T10:14:32.954] [ERROR] [Default] - Mysql Connected failed
+[2021-07-29T10:22:40.707] [ERROR] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:22:56.379] [ERROR] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:23:31.392] [ERROR] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:23:46.116] [ERROR] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:25:50.685] [ERROR] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:27:31.994] [ERROR] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:29:20.759] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:38:39.730] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:39:24.981] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:39:36.092] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:39:43.858] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:44:49.328] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:44:51.952] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:44:58.513] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:45:04.085] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:45:37.298] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:45:44.596] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:45:50.426] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:47:15.101] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:47:33.692] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:49:13.123] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-29T10:49:18.845] [ERROR] [Default] - ReferenceError: action is not defined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:5:20)
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
+    at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
+    at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
+    at E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+[2021-07-29T10:49:18.847] [INFO] [Default] - GET 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"action is not defined"} - ::1 - 4ms
+[2021-07-29T10:52:26.114] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:52:31.470] [INFO] [Default] - GET 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 234ms
+[2021-07-29T10:52:47.638] [INFO] [Default] - GET 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 114ms
+[2021-07-29T10:52:51.664] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-07-29T10:53:01.313] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:53:03.060] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 241ms
+[2021-07-29T10:53:25.952] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:53:27.120] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： "123" - ::1 - 247ms
+[2021-07-29T10:56:11.641] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:56:17.041] [ERROR] [Default] - ReferenceError: ConvolverNode is not defined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:9:7)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async bodyParser (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:95:5)
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T10:56:17.045] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"ConvolverNode is not defined"} - ::1 - 230ms
+[2021-07-29T10:56:25.971] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:56:27.139] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 251ms
+[2021-07-29T10:56:59.611] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:57:02.928] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 248ms
+[2021-07-29T10:58:53.977] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:58:59.622] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:59:01.317] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 254ms
+[2021-07-29T10:59:20.363] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:59:29.637] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:59:43.791] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T10:59:46.315] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 236ms
+[2021-07-29T11:00:43.745] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:00:49.559] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 5ms
+[2021-07-29T11:01:03.551] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 2ms
+[2021-07-29T11:01:32.684] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:01:34.854] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 9ms
+[2021-07-29T11:01:42.674] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:01:43.651] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 7ms
+[2021-07-29T11:03:37.829] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:03:42.725] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 6ms
+[2021-07-29T11:03:56.048] [INFO] [Default] - POST 200 /restful/v1/account/login?phone=15087973147 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 54ms
+[2021-07-29T11:04:07.837] [ERROR] [Default] - SyntaxError: invalid JSON, only supports object and array
+    at parse (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:55:13)
+    at AsyncFunction.module.exports [as json] (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async parseBody (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:100:14)
+    at async bodyParser (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:85:19)
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T11:04:07.838] [INFO] [Default] - POST 200 /restful/v1/account/login?phone=15087973147 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"invalid JSON, only supports object and array"} - ::1 - 2ms
+[2021-07-29T11:04:22.420] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:04:24.386] [ERROR] [Default] - SyntaxError: invalid JSON, only supports object and array
+    at parse (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:55:13)
+    at AsyncFunction.module.exports [as json] (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async parseBody (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:100:14)
+    at async bodyParser (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:85:19)
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T11:04:24.391] [INFO] [Default] - POST 200 /restful/v1/account/login?phone=15087973147 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"invalid JSON, only supports object and array"} - ::1 - 28ms
+[2021-07-29T11:04:37.495] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:04:38.463] [ERROR] [Default] - SyntaxError: invalid JSON, only supports object and array
+    at parse (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:55:13)
+    at AsyncFunction.module.exports [as json] (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async parseBody (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:100:14)
+    at async bodyParser (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:85:19)
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T11:04:38.466] [INFO] [Default] - POST 200 /restful/v1/account/login?phone=15087973147 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"invalid JSON, only supports object and array"} - ::1 - 20ms
+[2021-07-29T11:04:49.678] [ERROR] [Default] - SyntaxError: invalid JSON, only supports object and array
+    at parse (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:55:13)
+    at AsyncFunction.module.exports [as json] (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async parseBody (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:100:14)
+    at async bodyParser (E:\MyCode\Company\Kefu\node_modules\koa-bodyparser\index.js:85:19)
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T11:04:49.679] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"invalid JSON, only supports object and array"} - ::1 - 2ms
+[2021-07-29T11:05:15.182] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 3ms
+[2021-07-29T11:07:57.632] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:07:59.700] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 9ms
+[2021-07-29T11:08:52.419] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:08:56.027] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 9ms
+[2021-07-29T11:09:31.258] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":""} - ::1 - 281ms
+[2021-07-29T11:11:18.764] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":""} - ::1 - 132ms
+[2021-07-29T11:11:20.038] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":""} - ::1 - 129ms
+[2021-07-29T11:12:00.345] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:14:24.963] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:14:46.672] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:14:52.616] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":""} - ::1 - 269ms
+[2021-07-29T11:14:58.295] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"------WebKitFormBoundary0hLmiyoz5O1Loh94\r\nContent-Disposition: form-data; name":"\"phone\"\r\n\r\n15087973147\r\n------WebKitFormBoundary0hLmiyoz5O1Loh94--\r\n"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 4ms
+[2021-07-29T11:17:00.588] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:17:08.392] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"------WebKitFormBoundary3csQjAwwZuTAgZjT\r\nContent-Disposition: form-data; name":"\"phone\"\r\n\r\n15087973147\r\n------WebKitFormBoundary3csQjAwwZuTAgZjT--\r\n"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 29ms
+[2021-07-29T11:17:42.016] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:17:45.511] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"------WebKitFormBoundaryuyGUvYXermjHWsOU\r\nContent-Disposition: form-data; name":"\"phone\"\r\n\r\n15087973147\r\n------WebKitFormBoundaryuyGUvYXermjHWsOU--\r\n"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 31ms
+[2021-07-29T11:17:51.937] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"------WebKitFormBoundaryVIjnc4giAgtPXFbA\r\nContent-Disposition: form-data; name":"\"phone\"\r\n\r\n15087973147\r\n------WebKitFormBoundaryVIjnc4giAgtPXFbA--\r\n"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 7ms
+[2021-07-29T11:18:19.128] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:18:27.848] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:18:31.310] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"------WebKitFormBoundaryRomNo5whxJSMYyGN\r\nContent-Disposition: form-data; name":"\"phone\"\r\n\r\n15087973147\r\n------WebKitFormBoundaryRomNo5whxJSMYyGN--\r\n"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 30ms
+[2021-07-29T11:18:46.213] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 29ms
+[2021-07-29T11:18:55.057] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:18:56.570] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 10ms
+[2021-07-29T11:19:10.393] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:19:11.727] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 9ms
+[2021-07-29T11:19:24.477] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:19:25.466] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 10ms
+[2021-07-29T11:19:37.579] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:19:37.695] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 9ms
+[2021-07-29T11:19:55.810] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:20:03.347] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:20:06.054] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 10ms
+[2021-07-29T11:20:48.389] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:20:52.123] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 11ms
+[2021-07-29T11:22:37.118] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:23:00.380] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:23:02.341] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 12ms
+[2021-07-29T11:23:15.777] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:23:16.982] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 11ms
+[2021-07-29T11:23:21.704] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"------WebKitFormBoundarytmIMySRqBGZEiOYv\r\nContent-Disposition: form-data; name":"\"phone\"\r\n\r\n15087973147\r\n------WebKitFormBoundarytmIMySRqBGZEiOYv--\r\n"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 18ms
+[2021-07-29T11:23:29.286] [ERROR] [Default] - Error: invalid JSON, only supports object and array
+    at parse (E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:60:13)
+    at E:\MyCode\Company\Kefu\node_modules\co-body\lib\json.js:45:22
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T11:23:29.288] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"invalid JSON, only supports object and array"} - ::1 - 1ms
+[2021-07-29T11:23:39.574] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 2ms
+[2021-07-29T11:23:55.296] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:23:56.503] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 11ms
+[2021-07-29T11:24:00.965] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 2ms
+[2021-07-29T11:24:23.747] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:24:24.934] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 11ms
+[2021-07-29T11:24:33.912] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:24:34.481] [ERROR] [Default] - ReferenceError: user is not defined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:19:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T11:24:34.484] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"user is not defined"} - ::1 - 257ms
+[2021-07-29T11:24:39.864] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:24:43.930] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:24:44.225] [ERROR] [Default] - ReferenceError: config is not defined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:22:7)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-07-29T11:24:44.227] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"config is not defined"} - ::1 - 260ms
+[2021-07-29T11:25:31.190] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:25:33.445] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc1MzI3MzMsImlhdCI6MTYyNzUyOTEzM30.lUwGHjh4-W7VkfAnKms19mdNaN0P_C8AvyChRhe8nag"} - ::1 - 269ms
+[2021-07-29T11:26:52.658] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:26:56.002] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc1MzI4MTUsImlhdCI6MTYyNzUyOTIxNX0.JaTTK0fSyynC9VX71nga8zZVtxz9wtX-GDaaB0nbL3g"} - ::1 - 262ms
+[2021-07-29T11:32:20.961] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-29T11:32:29.753] [INFO] [Default] - Mysql Connected to MongoDB

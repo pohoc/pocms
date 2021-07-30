@@ -4,7 +4,7 @@ let ApiRouter = new Router({
   prefix:'/restful/v1'
 });
 
-ApiRouter.get('/login', controllers.api.login)
-ApiRouter.get('/register', controllers.api.register)
+ApiRouter.post('/account/login', controllers.api.login)
+ApiRouter.get('/account/register', controllers.api.register)
 
 module.exports = ApiRouter;
