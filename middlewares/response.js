@@ -1,14 +1,21 @@
 const { logger } = require('./logger')
 
 // 这个middleware用于将ctx.result中的内容最终回传给客户端
+// 否则取error错误信息
 // 回传的格式遵循这样的格式：{ code: 0, msg: any data: any }
 const responseHandler = (ctx) => {
+  ctx.type = 'json'
   if (ctx.result !== undefined) {
-    ctx.type = 'json'
     ctx.body = {
-      code: 200,
+      code: 0,
       msg: ctx.msg || '',
       data: ctx.result
+    }
+  }else{
+    ctx.body = {
+      code: ctx.code,
+      msg: ctx.msg || '',
+      data: ''
     }
   }
 }

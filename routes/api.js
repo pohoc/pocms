@@ -5,6 +5,6 @@ let ApiRouter = new Router({
 });
 
 ApiRouter.post('/account/login', controllers.api.login)
-ApiRouter.get('/account/register', controllers.api.register)
+ApiRouter.post('/account/register', controllers.api.register)
 
 module.exports = ApiRouter;

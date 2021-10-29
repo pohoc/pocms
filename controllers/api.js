@@ -1,19 +1,47 @@
 const jwt = require("jsonwebtoken");
-const config = require('../config')
+const config = require("../config");
+const apiState = require("../action/api.action");
 const action = require("../action/account.action");
-const { InvalidQueryError } = require("../lib/error");
+const log = require("../action/log.action");
+const { ForbiddenError, InvalidQueryError } = require("../lib/error");
 const api = {};
 api.login = async (ctx, next) => {
-  const { phone } = ctx.request.body;
-  if (!phone) {
-    throw new InvalidQueryError();
+  // 校验接口是否开启
+  if (!(await apiState.checkState("login"))) {
+    throw new ForbiddenError();
   }
-  const hasPhone = await action.checkInfo({ phone });
-  if (!hasPhone) {
-    ctx.result = "";
-    ctx.msg = "该手机号未注册";
+  const { username, password } = ctx.request.body;
+  const client = ctx.request.headers["user-agent"];
+  // 判断是否传入值
+  if (!username && !password) {
+    ctx.code = 10001;
+    ctx.msg = '账号不存在';
+    return next();
+  }
+  // 查看账户是否被锁定
+  const times = await action.isLoginLock(username);
+  if (times) {
+    ctx.code = 10001;
+    ctx.msg = "你试图在破解密码，请3个小时后再试";
     return;
+  }
+
+  const user = await action.checkPass(username, action.cryptPass(password));
+  if (!user) {
+    await action.setTimeRedis(username);
+    ctx.code = 10001;
+    ctx.msg = "用户名或密码错误";
   } else {
+    delete user.password;
+    // 记入登录日志
+    await log.SetInfo({
+      uid: user.id,
+      name: user.username,
+      client: client,
+      type: "login",
+      remark: "登录成功",
+    });
+    // 封装token
     ctx.result = jwt.sign(
       {
         data: hasPhone.id,
@@ -27,6 +55,12 @@ api.login = async (ctx, next) => {
 };
 
 api.register = async (ctx, next) => {
+  // 校验接口是否开启
+  if (!(await apiState.checkState("register"))) {
+    throw new ForbiddenError();
+  }
+
+  const { phone } = ctx.request.body;
   ctx.body = "2";
 };
 

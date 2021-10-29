@@ -1,0 +1,161 @@
+[2021-07-30T08:43:00.130] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-07-30T08:43:00.593] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-30T08:43:02.269] [ERROR] [Default] - Mysql Connected failed
+[2021-07-30T08:43:04.856] [INFO] [Default] - GET 404 /restful/v1/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-30T08:43:11.098] [INFO] [Default] - GET 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-07-30T09:05:21.283] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTA3MjEsImlhdCI6MTYyNzYwNzEyMX0.pBSBiDbAFZMmCYEIBw_vDv8zqm-Fk5I5bHWSFszSbIU"} - ::1 - 260ms
+[2021-07-30T09:40:23.530] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:40:25.934] [ERROR] [Default] - ReferenceError: userModel is not defined
+    at Object.checkInfo (E:\MyCode\Company\Kefu\action\account.action.js:40:17)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:11:33)
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
+    at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
+    at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
+    at E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:15)
+[2021-07-30T09:40:25.936] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"userModel is not defined"} - ::1 - 12ms
+[2021-07-30T09:40:49.955] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:40:51.978] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTI4NTEsImlhdCI6MTYyNzYwOTI1MX0.V0EXbRm2mzPd1cUVEk86eGaNaSMB362YzeDEC649J98"} - ::1 - 249ms
+[2021-07-30T09:41:35.669] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:41:43.837] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:42:01.791] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:47:23.905] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:49:44.584] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T09:52:50.205] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:29:47.977] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:31:31.724] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:31:34.011] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:32:25.459] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:32:35.427] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:33:31.134] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:33:53.259] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTYwMzMsImlhdCI6MTYyNzYxMjQzM30.A8g34dzUdq-QdwfIVsXg9kfGSvFhpqEwd5vifeS7XvI"} - ::1 - 232ms
+[2021-07-30T10:34:53.791] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:05.398] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:30.376] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:36.559] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:38.984] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:35:45.836] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:36:02.575] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:36:03.737] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:47:31.707] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:50:42.262] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:51:33.689] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:52:06.773] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T10:54:11.961] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:15:31.677] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:15:35.428] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:15:35.430] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:16:00.945] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:16:21.192] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:16:26.056] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:16:26.058] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:16:46.740] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:16:47.998] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:16:48.001] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:17:16.569] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:18:02.409] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:18:02.412] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 3ms
+[2021-07-30T11:24:50.559] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:24:52.951] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:24:52.953] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:25:05.390] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:25:05.391] [INFO] [Default] - POST 200 / 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 1ms
+[2021-07-30T11:25:09.037] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:25:09.038] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 2ms
+[2021-07-30T11:25:39.392] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:25:47.207] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:25:47.210] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:26:53.397] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:26:55.458] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:26:55.461] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 5ms
+[2021-07-30T11:27:13.223] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:27:15.385] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:27:15.388] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 3ms
+[2021-07-30T11:27:31.570] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:27:33.112] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTkyNTMsImlhdCI6MTYyNzYxNTY1M30.gZyvwxaDGd1sKqLUF2W_T3oUA3b18hSGS6zhZEgJgnU"} - ::1 - 240ms
+[2021-07-30T11:29:03.152] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:05.685] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:05.688] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:29:14.795] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:15.067] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:15.069] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:29:16.041] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:16.042] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 1ms
+[2021-07-30T11:29:28.535] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:28.902] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
+    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
+    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[2021-07-30T11:29:28.905] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
+[2021-07-30T11:29:51.130] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-07-30T11:29:57.152] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTkzOTcsImlhdCI6MTYyNzYxNTc5N30.xwVxA2s8PMKFnAbY-wGiCStNzRaoqhrJD68ZKyT4kMo"} - ::1 - 275ms

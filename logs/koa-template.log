@@ -1,13 +1,65 @@
-[2021-07-30T08:43:00.130] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
-[2021-07-30T08:43:00.593] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-30T08:43:02.269] [ERROR] [Default] - Mysql Connected failed
-[2021-07-30T08:43:04.856] [INFO] [Default] - GET 404 /restful/v1/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-30T08:43:11.098] [INFO] [Default] - GET 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
-[2021-07-30T09:05:21.283] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTA3MjEsImlhdCI6MTYyNzYwNzEyMX0.pBSBiDbAFZMmCYEIBw_vDv8zqm-Fk5I5bHWSFszSbIU"} - ::1 - 260ms
-[2021-07-30T09:40:23.530] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T09:40:25.934] [ERROR] [Default] - ReferenceError: userModel is not defined
-    at Object.checkInfo (E:\MyCode\Company\Kefu\action\account.action.js:40:17)
-    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:11:33)
+[2021-10-29T10:21:04.249] [ERROR] [Default] - Mysql Connected failed
+[2021-10-29T14:51:31.641] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T14:52:00.751] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T14:52:51.544] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T14:53:23.540] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T14:54:00.298] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T14:54:28.628] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:01:04.393] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:20:17.074] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:22:06.689] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:22:08.138] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:30:44.349] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:32:13.935] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:33:04.778] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:35:13.087] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:42:31.612] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:42:40.081] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-10-29T15:42:42.636] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-10-29T15:43:43.361] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:47:18.012] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:47:33.221] [INFO] [Default] - GET 404 /restful/v1/login 请求参数： {} 响应参数： undefined - ::1 - 3ms
+[2021-10-29T15:48:03.252] [INFO] [Default] - GET 404 /restful/v1/account/login 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-10-29T15:48:18.163] [ERROR] [Default] - Error: ER_BAD_FIELD_ERROR: Unknown column 'name' in 'where clause'
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getState (E:\MyCode\Company\Kefu\models\api.model.js:11:31)
+    at Object.checkState (E:\MyCode\Company\Kefu\action\api.action.js:14:32)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:8:21)
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
+    at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
+    at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16 {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'name' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "SELECT * FROM pophp_admin WHERE `name` = '[object Object]'"
+}
+[2021-10-29T15:48:18.168] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 11ms
+[2021-10-29T15:50:52.545] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:50:55.257] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:50:57.885] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 10ms
+[2021-10-29T15:51:31.292] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:51:34.574] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 11ms
+[2021-10-29T15:52:04.261] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:52:07.763] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 14ms
+[2021-10-29T15:52:37.234] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:52:39.393] [ERROR] [Default] - ReferenceError: login is not defined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:8:33)
     at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:44:32)
     at next (E:\MyCode\Company\Kefu\node_modules\koa-compose\index.js:45:18)
     at E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:346:16
@@ -16,146 +68,859 @@
     at dispatch (E:\MyCode\Company\Kefu\node_modules\koa-router\lib\router.js:351:31)
     at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
     at cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:15)
-[2021-07-30T09:40:25.936] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"userModel is not defined"} - ::1 - 12ms
-[2021-07-30T09:40:49.955] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T09:40:51.978] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTI4NTEsImlhdCI6MTYyNzYwOTI1MX0.V0EXbRm2mzPd1cUVEk86eGaNaSMB362YzeDEC649J98"} - ::1 - 249ms
-[2021-07-30T09:41:35.669] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T09:41:43.837] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T09:42:01.791] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T09:47:23.905] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T09:49:44.584] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T09:52:50.205] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:29:47.977] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:31:31.724] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:31:34.011] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:32:25.459] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:32:35.427] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:33:31.134] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:33:53.259] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTYwMzMsImlhdCI6MTYyNzYxMjQzM30.A8g34dzUdq-QdwfIVsXg9kfGSvFhpqEwd5vifeS7XvI"} - ::1 - 232ms
-[2021-07-30T10:34:53.791] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:35:05.398] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:35:30.376] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:35:36.559] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:35:38.984] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:35:45.836] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:36:02.575] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:36:03.737] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:47:31.707] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:50:42.262] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:51:33.689] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:52:06.773] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T10:54:11.961] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:15:31.677] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:15:35.428] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:15:35.430] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:16:00.945] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:16:21.192] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:16:26.056] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:16:26.058] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:16:46.740] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:16:47.998] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:16:48.001] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:17:16.569] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:18:02.409] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:18:02.412] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 3ms
-[2021-07-30T11:24:50.559] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:24:52.951] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:24:52.953] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:25:05.390] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:25:05.391] [INFO] [Default] - POST 200 / 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 1ms
-[2021-07-30T11:25:09.037] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:25:09.038] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 2ms
-[2021-07-30T11:25:39.392] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:25:47.207] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:25:47.210] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:26:53.397] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:26:55.458] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:26:55.461] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 5ms
-[2021-07-30T11:27:13.223] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:27:15.385] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:27:15.388] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 3ms
-[2021-07-30T11:27:31.570] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:27:33.112] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTkyNTMsImlhdCI6MTYyNzYxNTY1M30.gZyvwxaDGd1sKqLUF2W_T3oUA3b18hSGS6zhZEgJgnU"} - ::1 - 240ms
-[2021-07-30T11:29:03.152] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:29:05.685] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:29:05.688] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:29:14.795] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:29:15.067] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:29:15.069] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:29:16.041] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:29:16.042] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 1ms
-[2021-07-30T11:29:28.535] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:29:28.902] [ERROR] [Default] - Error: MultipartParser.end(): stream ended unexpectedly: state = START
-    at MultipartParser.end (E:\MyCode\Company\Kefu\node_modules\formidable\lib\multipart_parser.js:326:12)
-    at IncomingMessage.<anonymous> (E:\MyCode\Company\Kefu\node_modules\formidable\lib\incoming_form.js:132:30)
-    at IncomingMessage.emit (events.js:327:22)
-    at endReadableNT (internal/streams/readable.js:1327:12)
-    at processTicksAndRejections (internal/process/task_queues.js:80:21)
-[2021-07-30T11:29:28.905] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":-1,"data":null,"msg":"MultipartParser.end(): stream ended unexpectedly: state = START"} - ::1 - 4ms
-[2021-07-30T11:29:51.130] [INFO] [Default] - Mysql Connected to MongoDB
-[2021-07-30T11:29:57.152] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"phone":"15087973147"} 响应参数： {"code":200,"msg":"","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc2MTkzOTcsImlhdCI6MTYyNzYxNTc5N30.xwVxA2s8PMKFnAbY-wGiCStNzRaoqhrJD68ZKyT4kMo"} - ::1 - 275ms
+    at dispatch (E:\MyCode\Company\Kefu\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+[2021-10-29T15:52:39.395] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"login is not defined"} - ::1 - 16ms
+[2021-10-29T15:52:55.124] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:52:57.066] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":403,"data":null,"msg":"拒绝访问"} - ::1 - 12ms
+[2021-10-29T15:53:16.361] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:53:17.944] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":403,"data":null,"msg":"拒绝访问"} - ::1 - 12ms
+[2021-10-29T15:53:54.910] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:53:56.736] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":403,"data":null,"msg":"拒绝访问"} - ::1 - 10ms
+[2021-10-29T15:54:11.321] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:54:12.332] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":403,"data":null,"msg":"拒绝访问"} - ::1 - 11ms
+[2021-10-29T15:54:24.838] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T15:54:26.248] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 11ms
+[2021-10-29T15:54:38.076] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 4ms
+[2021-10-29T15:54:51.517] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":403,"data":null,"msg":"拒绝访问"} - ::1 - 2ms
+[2021-10-29T15:57:13.458] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:25:48.546] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:29:46.911] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:30:24.872] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:30:37.021] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:36:30.052] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:36:38.053] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:37:11.299] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:38:44.060] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:43:10.060] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:43:17.654] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:51:01.702] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:51:33.021] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:51:39.078] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:51:42.254] [ERROR] [Default] - Error: node_redis: The GET command contains a invalid argument type of "undefined".
+Only strings, dates and buffers are accepted. Please update your code to use valid argument types.
+    at RedisClient.internal_send_command (E:\MyCode\Company\Kefu\node_modules\redis\index.js:850:37)
+    at RedisClient.get (E:\MyCode\Company\Kefu\node_modules\redis\lib\commands.js:46:25)
+    at E:\MyCode\Company\Kefu\lib\redis.js:48:14
+    at new Promise (<anonymous>)
+    at Redis.get (E:\MyCode\Company\Kefu\lib\redis.js:47:12)
+    at Object.isLoginLock (E:\MyCode\Company\Kefu\action\account.action.js:44:26)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:21:30)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+[2021-10-29T16:51:42.256] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":-1,"data":null,"msg":"node_redis: The GET command contains a invalid argument type of \"undefined\".\nOnly strings, dates and buffers are accepted. Please update your code to use valid argument types."} - ::1 - 14ms
+[2021-10-29T16:53:19.064] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:53:22.782] [ERROR] [Default] - TypeError: Cannot read property 'salt' of undefined
+    at Object.decrypt (E:\MyCode\Company\Kefu\node_modules\crypto-js\cipher-core.js:876:102)
+    at Object.decrypt (E:\MyCode\Company\Kefu\node_modules\crypto-js\cipher-core.js:205:59)
+    at Object.exports.aesDecrypt (E:\MyCode\Company\Kefu\lib\crypto.js:9:28)
+    at Object.cryptPass (E:\MyCode\Company\Kefu\action\account.action.js:33:30)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:27:56)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T16:53:22.784] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'salt' of undefined"} - ::1 - 17ms
+[2021-10-29T16:53:37.263] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:55:29.817] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:55:34.011] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:55:37.338] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 22ms
+[2021-10-29T16:55:50.253] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:55:50.998] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 17ms
+[2021-10-29T16:56:23.200] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:56:25.071] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 15ms
+[2021-10-29T16:56:32.282] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:56:42.341] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:56:43.498] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 17ms
+[2021-10-29T16:56:55.151] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T16:56:57.909] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 17ms
+[2021-10-29T16:58:12.751] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:04:09.132] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:04:12.365] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 17ms
+[2021-10-29T17:05:33.190] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:05:36.231] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":400,"data":null,"msg":"无效的参数"} - ::1 - 15ms
+[2021-10-29T17:05:41.546] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:05:42.181] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 16ms
+[2021-10-29T17:05:48.886] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:06:02.123] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:06:03.297] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 18ms
+[2021-10-29T17:06:16.985] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:06:20.413] [ERROR] [Default] - TypeError: Cannot read property 'salt' of undefined
+    at Object.decrypt (E:\MyCode\Company\Kefu\node_modules\crypto-js\cipher-core.js:876:102)
+    at Object.decrypt (E:\MyCode\Company\Kefu\node_modules\crypto-js\cipher-core.js:205:59)
+    at Object.exports.aesDecrypt (E:\MyCode\Company\Kefu\lib\crypto.js:9:28)
+    at Object.cryptPass (E:\MyCode\Company\Kefu\action\account.action.js:33:30)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:30:56)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:06:20.416] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'salt' of undefined"} - ::1 - 19ms
+[2021-10-29T17:06:45.425] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:06:48.830] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 16ms
+[2021-10-29T17:07:57.456] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:07:59.271] [ERROR] [Default] - BadRequestError: 重置密码错误
+    at Object.throw (E:\MyCode\Company\Kefu\node_modules\koa\lib\context.js:97:11)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:20:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:07:59.273] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"重置密码错误"} - ::1 - 17ms
+[2021-10-29T17:10:05.744] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:10:09.168] [ERROR] [Default] - BadRequestError: {"msg":"表单信息不正确","data":""}
+    at Object.throw (E:\MyCode\Company\Kefu\node_modules\koa\lib\context.js:97:11)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:24:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:10:09.171] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"{\"msg\":\"表单信息不正确\",\"data\":\"\"}"} - ::1 - 20ms
+[2021-10-29T17:10:54.375] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:10:55.660] [ERROR] [Default] - InternalServerError: 用户名或密码不正确
+    at Object.throw (E:\MyCode\Company\Kefu\node_modules\koa\lib\context.js:97:11)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:20:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:10:55.662] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"用户名或密码不正确"} - ::1 - 18ms
+[2021-10-29T17:14:19.271] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:14:23.047] [ERROR] [Default] - BadRequestError: 用户名或密码不正确
+    at Object.throw (E:\MyCode\Company\Kefu\node_modules\koa\lib\context.js:97:11)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:20:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:14:23.049] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"用户名或密码不正确"} - ::1 - 23ms
+[2021-10-29T17:15:03.534] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:15:05.723] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:15:09.158] [ERROR] [Default] - BadRequestError: 用户名或密码不正确
+    at Object.throw (E:\MyCode\Company\Kefu\node_modules\koa\lib\context.js:97:11)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:20:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:15:09.160] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"用户名或密码不正确"} - ::1 - 21ms
+[2021-10-29T17:18:21.564] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:18:23.660] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"用户名或密码不正确"} - ::1 - 16ms
+[2021-10-29T17:18:45.611] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:18:46.989] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"用户名或密码不正确"} - ::1 - 17ms
+[2021-10-29T17:22:41.361] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:22:44.258] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:22:46.832] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"用户名或密码不正确"} - ::1 - 19ms
+[2021-10-29T17:32:04.236] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:32:52.245] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:33:44.911] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:34:40.689] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:34:43.197] [ERROR] [Default] - TypeError: Cannot read property 'salt' of undefined
+    at Object.decrypt (E:\MyCode\Company\Kefu\node_modules\crypto-js\cipher-core.js:876:102)
+    at Object.decrypt (E:\MyCode\Company\Kefu\node_modules\crypto-js\cipher-core.js:205:59)
+    at Object.exports.aesDecrypt (E:\MyCode\Company\Kefu\lib\crypto.js:9:28)
+    at Object.cryptPass (E:\MyCode\Company\Kefu\action\account.action.js:33:30)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:35:56)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:34:43.200] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'salt' of undefined"} - ::1 - 21ms
+[2021-10-29T17:34:56.357] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:35:05.009] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:35:06.552] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 14ms
+[2021-10-29T17:36:48.712] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:36:50.515] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 16ms
+[2021-10-29T17:37:43.536] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:37:57.298] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:38:20.511] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:38:23.070] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 16ms
+[2021-10-29T17:38:43.336] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:38:46.974] [INFO] [Default] - POST 404 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： undefined - ::1 - 14ms
+[2021-10-29T17:39:19.855] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:39:21.281] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin"} 响应参数： {"code":10001,"msg":"账号不存在","data":""} - ::1 - 16ms
+[2021-10-29T17:39:32.408] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:39:38.970] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:24:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:33:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:39:38.976] [ERROR] [Default] - ReferenceError: logger is not defined
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:28:7)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:33:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:39:38.978] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"logger is not defined"} - ::1 - 41ms
+[2021-10-29T17:40:57.512] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:41:02.924] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:41:05.362] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:33:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:41:05.370] [ERROR] [Default] - TypeError: logger.console is not a function
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:29:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:33:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:41:05.372] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"logger.console is not a function"} - ::1 - 35ms
+[2021-10-29T17:42:03.039] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:42:06.440] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:42:06.445] [ERROR] [Default] - TypeError: logger.console is not a function
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:29:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:42:06.448] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"logger.console is not a function"} - ::1 - 35ms
+[2021-10-29T17:42:10.549] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":10001,"msg":"账号不存在","data":""} - ::1 - 3ms
+[2021-10-29T17:42:34.700] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:42:38.124] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":10001,"msg":"账号不存在","data":""} - ::1 - 15ms
+[2021-10-29T17:43:08.264] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:43:18.604] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:27:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:43:18.608] [ERROR] [Default] - TypeError: logger.console is not a function
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:29:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:27:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:43:18.610] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"logger.console is not a function"} - ::1 - 31ms
+[2021-10-29T17:43:35.001] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:48:00.211] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:48:03.123] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:48:03.128] [ERROR] [Default] - TypeError: logger.ERROR is not a function
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:29:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:48:03.131] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"logger.ERROR is not a function"} - ::1 - 32ms
+[2021-10-29T17:48:12.577] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:48:17.549] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:48:19.575] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:48:19.579] [ERROR] [Default] - 
+[2021-10-29T17:48:19.598] [ERROR] [Default] - ReferenceError: errLogin is not defined
+    at Object.setTimeRedis (E:\MyCode\Company\Kefu\action\account.action.js:56:55)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:30:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:48:19.601] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"errLogin is not defined"} - ::1 - 48ms
+[2021-10-29T17:48:25.035] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:48:26.141] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:48:26.146] [ERROR] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:48:26.148] [ERROR] [Default] - ReferenceError: errLogin is not defined
+    at Object.setTimeRedis (E:\MyCode\Company\Kefu\action\account.action.js:56:55)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:30:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:48:26.152] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"errLogin is not defined"} - ::1 - 32ms
+[2021-10-29T17:48:37.889] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:48:40.165] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:24:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:48:40.169] [ERROR] [Default] - ReferenceError: logger is not defined
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:28:7)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:48:40.172] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"logger is not defined"} - ::1 - 30ms
+[2021-10-29T17:49:20.509] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:49:29.118] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:49:33.491] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:49:44.234] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:49:44.242] [ERROR] [Default] - TypeError: logger.console is not a function
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:29:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:49:44.244] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"logger.console is not a function"} - ::1 - 37ms
+[2021-10-29T17:49:53.916] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:49:55.470] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:49:55.475] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:49:55.477] [ERROR] [Default] - ReferenceError: errLogin is not defined
+    at Object.setTimeRedis (E:\MyCode\Company\Kefu\action\account.action.js:56:55)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:30:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:49:55.479] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"errLogin is not defined"} - ::1 - 31ms
+[2021-10-29T17:52:25.798] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:52:27.786] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:25:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:52:27.791] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:52:27.793] [ERROR] [Default] - ReferenceError: errLogin is not defined
+    at Object.setTimeRedis (E:\MyCode\Company\Kefu\action\account.action.js:56:55)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:30:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:52:27.795] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"errLogin is not defined"} - ::1 - 34ms
+[2021-10-29T17:53:11.985] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:53:14.863] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:26:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:28:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:53:14.867] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:53:14.875] [ERROR] [Default] - ReferenceError: actionLogin is not defined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:32:5)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:53:14.877] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"actionLogin is not defined"} - ::1 - 35ms
+[2021-10-29T17:54:05.043] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:54:33.436] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:54:35.655] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:54:39.661] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:55:06.192] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:55:09.600] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:26:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:29:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:55:09.606] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:55:09.610] [ERROR] [Default] - TypeError: Cannot read property 'id' of undefined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:34:17)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:55:09.612] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'id' of undefined"} - ::1 - 34ms
+[2021-10-29T17:57:11.804] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:57:14.663] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:26:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:29:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:57:14.667] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:57:14.675] [ERROR] [Default] - TypeError: Cannot read property 'id' of undefined
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:35:17)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T17:57:14.677] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'id' of undefined"} - ::1 - 36ms
+[2021-10-29T17:58:30.939] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:58:40.119] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:58:43.056] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:26:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:29:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:58:43.062] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:58:43.066] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":10001,"msg":"用户名或密码错误","data":""} - ::1 - 36ms
+[2021-10-29T17:59:28.114] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T17:59:30.783] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.pophp_user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:26:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:29:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.pophp_user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM pophp_user WHERE `name` = 'admin'"
+}
+[2021-10-29T17:59:30.790] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T17:59:30.797] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":10001,"msg":"用户名或密码错误","data":""} - ::1 - 37ms
+[2021-10-29T18:00:15.078] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T18:00:17.563] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.pophp_user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:26:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:29:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.pophp_user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM pophp_user WHERE `username` = 'admin'"
+}
+[2021-10-29T18:00:17.568] [ERROR] [Default] - ReferenceError: nausernameme is not defined
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:30:35)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async api.login (E:\MyCode\Company\Kefu\controllers\api.js:29:16)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\MyCode\Company\Kefu\middlewares\logger.js:30:3)
+[2021-10-29T18:00:17.570] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"nausernameme is not defined"} - ::1 - 30ms
+[2021-10-29T18:00:22.926] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T18:00:24.206] [ERROR] [Default] - Error: ER_NO_SUCH_TABLE: Table 'kefu.pophp_user' doesn't exist
+    at Query.Sequence._packetToError (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\MyCode\Company\Kefu\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (internal/streams/readable.js:309:12)
+    --------------------
+    at Pool.query (E:\MyCode\Company\Kefu\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\MyCode\Company\Kefu\lib\mysql.js:41:12
+    at new Promise (<anonymous>)
+    at DB.fetchRow (E:\MyCode\Company\Kefu\lib\mysql.js:39:12)
+    at Object.getInfoByJson (E:\MyCode\Company\Kefu\models\account.model.js:32:31)
+    at Object.checkPass (E:\MyCode\Company\Kefu\action\account.action.js:26:36)
+    at api.login (E:\MyCode\Company\Kefu\controllers\api.js:29:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async cors (E:\MyCode\Company\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\MyCode\Company\Kefu\node_modules\koa-static-cache\index.js:39:63 {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'kefu.pophp_user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "SELECT * FROM pophp_user WHERE `username` = 'admin'"
+}
+[2021-10-29T18:00:24.210] [INFO] [Default] - 验证密码时找不到用户信息：admin
+[2021-10-29T18:00:24.214] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":10001,"msg":"用户名或密码错误","data":""} - ::1 - 31ms
+[2021-10-29T18:00:51.263] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-10-29T18:00:54.306] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":10001,"msg":"用户名或密码错误","data":""} - ::1 - 28ms

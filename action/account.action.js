@@ -1,8 +1,10 @@
 const Mysql = require('../lib/mysql');
 const RD = require('../lib/redis');
 const crypto = require('../lib/crypto');
-const DB = new Mysql('user');
+const DB = new Mysql('pophp_admin');
 const AccountModel = require('../models/account.model')(DB);
+const { logger } = require('../middlewares/logger')
+const config = require("../config");
 
 const userControl = {
   /**
@@ -15,17 +17,17 @@ const userControl = {
     return !!row;
   },
   /**
-   * 
-   * @param {用户名} name 
+   * 验证用户密码
+   * @param {用户名} username 
    * @param {密码} password 
    * @returns 
    */
-  checkPass: async (name, password) => {
-    const row = await userModel.getInfoByJson({name});
+  checkPass: async (username, password) => {
+    const row = await AccountModel.getInfoByJson({username});
     if (Boolean(row)) {
       return row.password === password ? row : null;
     } else {
-      logger.console(`验证密码时找不到用户信息：${name}`);
+      logger.info(`验证密码时找不到用户信息：${username}`);
       return;
     }
   },
@@ -52,7 +54,7 @@ const userControl = {
   setTimeRedis: async (name) => {
     let val = await RD.get(name) || 0;
     await RD.set(name, ++val);
-    await RD.pexpireat(name, Date.parse(new Date()) + errLogin * 60000);
+    await RD.pexpireat(name, Date.parse(new Date()) + config.errLogin * 60000);
     return 1;
   },
   /**

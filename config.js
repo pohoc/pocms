@@ -5,16 +5,17 @@ module.exports = {
   secret: 'secret',
   publicDir: path.resolve(__dirname, './public'),
   logPath: path.resolve(__dirname, './logs/koa-template.log'),
+  errLogin: 180,
   mysql: {
-    host: '47.101.179.109',
+    host: '10.10.10.102',
     user: 'kefu',
-    password: 'NejjBPsYSpMLa6DT',
+    password: 'H32e3na5rBS2fc8C',
     port: '3306',
     database: 'kefu',
   },
   redis: {
-    host: '47.101.179.109',
-    port: '45777',
+    host: '10.10.10.102',
+    port: '6379',
     password: '7364484'
   }
 }

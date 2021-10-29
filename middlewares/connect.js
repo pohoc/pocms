@@ -47,7 +47,7 @@ const connect = app => {
   // app.use(favicon(path.join(__dirname, '../public/images/favicon.ico')));
 
   // Response
-  // app.use(responseHandler);
+  app.use(responseHandler);
 };
 
 module.exports = connect;
