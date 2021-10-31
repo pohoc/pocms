@@ -7,14 +7,14 @@ module.exports = {
   logPath: path.resolve(__dirname, './logs/koa-template.log'),
   errLogin: 180,
   mysql: {
-    host: '10.10.10.102',
+    host: '10.10.10.180',
     user: 'kefu',
-    password: 'H32e3na5rBS2fc8C',
+    password: 'wMGBNKdG25KxTAW7',
     port: '3306',
     database: 'kefu',
   },
   redis: {
-    host: '10.10.10.102',
+    host: '10.10.10.180',
     port: '6379',
     password: '7364484'
   }

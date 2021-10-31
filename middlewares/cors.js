@@ -9,7 +9,7 @@ const corsHandler = {
     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
     maxAge: 5,
     credentials: true,
-    allowMethods: ['GET', 'POST', 'DELETE'],
+    allowMethods: ['GET', 'POST'],
     allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }
 

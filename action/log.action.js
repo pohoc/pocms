@@ -1,5 +1,5 @@
 const Mysql = require('../lib/mysql');
-const DB = new Mysql('pophp_api');
+const DB = new Mysql('pophp_log');
 const LogModel = require('../models/log.model')(DB);
 
 const LogControl = {
@@ -10,7 +10,7 @@ const LogControl = {
    */
   SetInfo: async (info) => {
     info = Object.assign({}, {
-      times: new Date()
+      add_time: Math.round(new Date() / 1000)
     }, info);
 
     return await LogModel.Set(info);

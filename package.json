@@ -23,12 +23,14 @@
     "koa-helmet": "^4.1.0",
     "koa-json": "^2.0.2",
     "koa-jwt": "^3.5.1",
+    "koa-onerror": "^4.1.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa-static-cache": "^5.1.2",
     "koa2-cors": "^2.0.6",
     "log4js": "^3.0.6",
     "mysql": "^2.18.1",
-    "redis": "^3.1.2"
+    "redis": "^3.1.2",
+    "string-random": "^0.1.3"
   }
 }

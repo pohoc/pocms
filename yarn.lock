@@ -691,6 +691,14 @@ koa-jwt@^3.5.1:
     koa-unless "1.0.7"
     p-any "1.1.0"
 
+koa-onerror@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/koa-onerror/-/koa-onerror-4.1.0.tgz#7949c7651941e67b11813bf1fad03c2d34470b1c"
+  integrity sha512-UDvOkkXiyVtlhRIvo9wbqKG/pTiiVE5x2uIFpG5e6OmBawxBSURG/PeFa6e6UZjjxinXde3BmPWVSIVePMG6TA==
+  dependencies:
+    escape-html "^1.0.3"
+    stream-wormhole "^1.1.0"
+
 koa-router@^7.4.0:
   version "7.4.0"
   resolved "https://registry.nlark.com/koa-router/download/koa-router-7.4.0.tgz#aee1f7adc02d5cb31d7d67465c9eacc825e8c5e0"
@@ -1166,6 +1174,11 @@ sqlstring@2.3.1:
   resolved "https://registry.nlark.com/statuses/download/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
+stream-wormhole@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/stream-wormhole/-/stream-wormhole-1.1.0.tgz#300aff46ced553cfec642a05251885417693c33d"
+  integrity sha512-gHFfL3px0Kctd6Po0M8TzEvt3De/xu6cnRrjlfYNhwbhLPLwigI2t1nc6jrzNuaYg5C4YF78PPFuQPzRiqn9ew==
+
 streaming-json-stringify@3:
   version "3.1.0"
   resolved "https://registry.nlark.com/streaming-json-stringify/download/streaming-json-stringify-3.1.0.tgz#80200437a993cc39c4fe00263b7b3b903ac87af5"
@@ -1183,6 +1196,11 @@ streamroller@0.7.0:
     debug "^3.1.0"
     mkdirp "^0.5.1"
     readable-stream "^2.3.0"
+
+string-random@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/string-random/-/string-random-0.1.3.tgz#083f39835c2430fe0be76b9e72f0736e2e0f7b74"
+  integrity sha512-g+UsIwzKhNi+9/+Q3Q7hP8R4HkQxiIkQlttnxw6GRdk9pnnkGIv53C6H8dvh8wxAVDhkqpnWeauaPXS1b2sBJg==
 
 string_decoder@~1.1.1:
   version "1.1.1"

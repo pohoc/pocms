@@ -4,8 +4,9 @@ const apiState = require("../action/api.action");
 const action = require("../action/account.action");
 const log = require("../action/log.action");
 const { ForbiddenError, InvalidQueryError } = require("../lib/error");
-const api = {};
-api.login = async (ctx, next) => {
+const utils = require("../lib/utils");
+const account = {};
+account.login = async (ctx, next) => {
   // 校验接口是否开启
   if (!(await apiState.checkState("login"))) {
     throw new ForbiddenError();
@@ -15,7 +16,7 @@ api.login = async (ctx, next) => {
   // 判断是否传入值
   if (!username && !password) {
     ctx.code = 10001;
-    ctx.msg = '账号不存在';
+    ctx.msg = "账号不存在";
     return next();
   }
   // 查看账户是否被锁定
@@ -39,22 +40,26 @@ api.login = async (ctx, next) => {
       name: user.username,
       client: client,
       type: "login",
+      ip: utils.getClientIP(ctx.req),
       remark: "登录成功",
     });
     // 封装token
-    ctx.result = jwt.sign(
-      {
-        data: hasPhone.id,
-        // 设置 token 过期时间
-        exp: Math.floor(Date.now() / 1000) + 60 * 60, // 60 seconds * 60 minutes = 1 hour
-      },
-      config.secret
-    );
+    ctx.result = {
+      expires_in: 7200,
+      access_token: jwt.sign(
+        {
+          data: user.id,
+          // 设置 token 过期时间
+          exp: Math.floor(Date.now() / 1000) + 60 * 60, // 60 seconds * 60 minutes = 1 hour
+        },
+        config.secret
+      )
+    }
   }
   return next();
 };
 
-api.register = async (ctx, next) => {
+account.register = async (ctx, next) => {
   // 校验接口是否开启
   if (!(await apiState.checkState("register"))) {
     throw new ForbiddenError();
@@ -64,4 +69,4 @@ api.register = async (ctx, next) => {
   ctx.body = "2";
 };
 
-module.exports = api;
+module.exports = account;
