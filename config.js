@@ -1,21 +1,23 @@
 const path = require('path')
+const dotenv = require('dotenv');
+const configs = dotenv.config();
 
 module.exports = {
-  port: '3001',
-  secret: 'secret',
+  port: process.env.APP_PORT,
+  secret: process.env.APP_SECRET,
   publicDir: path.resolve(__dirname, './public'),
   logPath: path.resolve(__dirname, './logs/koa-template.log'),
   errLogin: 180,
   mysql: {
-    host: '10.10.10.180',
-    user: 'kefu',
-    password: 'wMGBNKdG25KxTAW7',
-    port: '3306',
-    database: 'kefu',
+    host: process.env.APP_MYSQL_HOST,
+    user: process.env.APP_MYSQL_USER,
+    password: process.env.APP_MYSQL_PASS,
+    port: process.env.APP_MYSQL_PORT,
+    database: process.env.APP_MYSQL_DATABASE,
   },
   redis: {
-    host: '10.10.10.180',
-    port: '6379',
-    password: '7364484'
+    host: process.env.APP_REDIS_HOST,
+    port: process.env.APP_REDIS_PORT,
+    password: process.env.APP_REDIS_PASS
   }
 }

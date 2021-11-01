@@ -13,8 +13,8 @@ const responseHandler = (ctx) => {
     }
   }else{
     ctx.body = {
-      code: ctx.code,
-      msg: ctx.msg || '',
+      code: ctx.code || -1,
+      msg: ctx.msg || '接口未返回数据',
       data: ''
     }
   }

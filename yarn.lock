@@ -290,6 +290,11 @@ dont-sniff-mimetype@1.1.0:
   resolved "https://registry.nlark.com/dont-sniff-mimetype/download/dont-sniff-mimetype-1.1.0.tgz#c7d0427f8bcb095762751252af59d148b0a623b2"
   integrity sha1-x9BCf4vLCVdidRJSr1nRSLCmI7I=
 
+dotenv@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.nlark.com/dotenv/download/dotenv-10.0.0.tgz?cache=0&sync_timestamp=1621629308355&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdotenv%2Fdownload%2Fdotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha1-PUInuPuV+BCWzdK2ZlP7LHCFuoE=
+
 ecdsa-sig-formatter@1.0.11:
   version "1.0.11"
   resolved "https://registry.nlark.com/ecdsa-sig-formatter/download/ecdsa-sig-formatter-1.0.11.tgz#ae0f0fa2d85045ef14a817daa3ce9acd0489e5bf"

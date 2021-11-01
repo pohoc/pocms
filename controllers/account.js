@@ -16,7 +16,7 @@ account.login = async (ctx, next) => {
   // 判断是否传入值
   if (!username && !password) {
     ctx.code = 10001;
-    ctx.msg = "账号不存在";
+    ctx.msg = "请传递参数";
     return next();
   }
   // 查看账户是否被锁定
@@ -24,7 +24,7 @@ account.login = async (ctx, next) => {
   if (times) {
     ctx.code = 10001;
     ctx.msg = "你试图在破解密码，请3个小时后再试";
-    return;
+    return next();
   }
 
   const user = await action.checkPass(username, action.cryptPass(password));
@@ -62,11 +62,12 @@ account.login = async (ctx, next) => {
 account.register = async (ctx, next) => {
   // 校验接口是否开启
   if (!(await apiState.checkState("register"))) {
+    console.log(1)
     throw new ForbiddenError();
   }
 
-  const { phone } = ctx.request.body;
-  ctx.body = "2";
+  // ctx.body = "2";
+  return next();
 };
 
 module.exports = account;
