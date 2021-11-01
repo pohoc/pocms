@@ -1025,3 +1025,47 @@
 [2021-11-01T18:53:52.589] [INFO] [Default] - Mysql Connected to MongoDB
 [2021-11-01T18:55:00.756] [INFO] [Default] - Redis connect Successful
 [2021-11-01T18:55:00.775] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-11-01T19:15:46.882] [INFO] [Default] - Redis connect Successful
+[2021-11-01T19:15:46.909] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-11-01T19:15:59.369] [INFO] [Default] - GET 200 /favicon.ico 请求参数： {} 响应参数： {"code":403,"data":null,"msg":"拒绝访问"} - ::1 - 9ms
+[2021-11-01T19:15:59.382] [INFO] [Default] - GET 200 / 请求参数： {} 响应参数： {"code":403,"data":null,"msg":"拒绝访问"} - ::1 - 1ms
+[2021-11-01T19:19:49.236] [ERROR] [Default] - TypeError: Cannot read property 'get' of undefined
+    at E:\新建文件夹\code\Kefu\lib\redis.js:47:14
+    at new Promise (<anonymous>)
+    at Redis.get (E:\新建文件夹\code\Kefu\lib\redis.js:46:12)
+    at Object.isLoginLock (E:\新建文件夹\code\Kefu\action\account.action.js:46:26)
+    at account.login (E:\新建文件夹\code\Kefu\controllers\account.js:23:30)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async UserFilter (E:\新建文件夹\code\Kefu\middlewares\Filter.js:10:3)
+    at async cors (E:\新建文件夹\code\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\新建文件夹\code\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\新建文件夹\code\Kefu\middlewares\logger.js:30:3)
+[2021-11-01T19:19:49.238] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'get' of undefined"} - ::1 - 157ms
+[2021-11-01T19:19:58.413] [ERROR] [Default] - TypeError: Cannot read property 'get' of undefined
+    at E:\新建文件夹\code\Kefu\lib\redis.js:47:14
+    at new Promise (<anonymous>)
+    at Redis.get (E:\新建文件夹\code\Kefu\lib\redis.js:46:12)
+    at Object.isLoginLock (E:\新建文件夹\code\Kefu\action\account.action.js:46:26)
+    at account.login (E:\新建文件夹\code\Kefu\controllers\account.js:23:30)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async UserFilter (E:\新建文件夹\code\Kefu\middlewares\Filter.js:10:3)
+    at async cors (E:\新建文件夹\code\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\新建文件夹\code\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\新建文件夹\code\Kefu\middlewares\logger.js:30:3)
+[2021-11-01T19:19:58.415] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'get' of undefined"} - ::1 - 5ms
+[2021-11-01T19:20:03.966] [INFO] [Default] - GET 200 /restful/v1/account/login 请求参数： {} 响应参数： {"code":-1,"msg":"接口未返回数据","data":""} - ::1 - 6ms
+[2021-11-01T19:20:08.213] [ERROR] [Default] - TypeError: Cannot read property 'get' of undefined
+    at E:\新建文件夹\code\Kefu\lib\redis.js:47:14
+    at new Promise (<anonymous>)
+    at Redis.get (E:\新建文件夹\code\Kefu\lib\redis.js:46:12)
+    at Object.isLoginLock (E:\新建文件夹\code\Kefu\action\account.action.js:46:26)
+    at account.login (E:\新建文件夹\code\Kefu\controllers\account.js:23:30)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async UserFilter (E:\新建文件夹\code\Kefu\middlewares\Filter.js:10:3)
+    at async cors (E:\新建文件夹\code\Kefu\node_modules\koa2-cors\dist\index.js:91:9)
+    at async E:\新建文件夹\code\Kefu\node_modules\koa-static-cache\index.js:39:63
+    at async loggerMiddleware (E:\新建文件夹\code\Kefu\middlewares\logger.js:30:3)
+[2021-11-01T19:20:08.215] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":-1,"data":null,"msg":"Cannot read property 'get' of undefined"} - ::1 - 5ms
+[2021-11-01T19:21:00.988] [INFO] [Default] - Redis connect Successful
+[2021-11-01T19:21:01.008] [INFO] [Default] - Mysql Connected to MongoDB
+[2021-11-01T19:21:03.138] [INFO] [Default] - POST 200 /restful/v1/account/login 请求参数： {"username":"admin","password":"123456"} 响应参数： {"code":0,"msg":"","data":{"expires_in":7200,"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoxLCJleHAiOjE2MzU3NjkyNjMsImlhdCI6MTYzNTc2NTY2M30.kXwza793FbA_bWil6j-hyin6tEYStDKodvzVcOKvSFc"}} - ::1 - 70ms
