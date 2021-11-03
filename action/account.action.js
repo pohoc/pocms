@@ -6,7 +6,7 @@ const AccountModel = require('../models/account.model')(DB);
 const { logger } = require('../middlewares/logger')
 const config = require("../config");
 
-const userControl = {
+const UserAction = {
   /**
    * 验证用户是否存在
    * @param {用户名} info 
@@ -81,4 +81,4 @@ const userControl = {
   },
 };
 
-module.exports = userControl;
+module.exports = UserAction;

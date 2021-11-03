@@ -40,11 +40,11 @@ app.use(cors(corsHandler));
 // API中间件
 app.use(UserFilter)
 
-// Routes 路由中间件
-app.use(ApiV1Router.routes(), ApiV1Router.allowedMethods()); // RESTFUL API V1
-
 // 权限中间件
 jwtMiddleware(app)
+
+// Routes 路由中间件
+app.use(ApiV1Router.routes(), ApiV1Router.allowedMethods()); // RESTFUL API V1
 
 // 静态目录
 app.use(koaStatic(path.join(__dirname, '../public/'), { maxAge: 60000 * 1440 * 30 }));
@@ -57,5 +57,7 @@ app.use(responseHandler);
 
 // Database 数据库连接
 database(app);
+
+
 
 module.exports = app;

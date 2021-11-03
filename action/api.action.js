@@ -2,7 +2,7 @@ const Mysql = require('../lib/mysql');
 const DB = new Mysql('pophp_api');
 const ApiModel = require('../models/api.model')(DB);
 
-const ApiControl = {
+const ApiAction = {
   /**
    * 验证接口是否开启
    * @param {接口名称} name 
@@ -14,4 +14,4 @@ const ApiControl = {
   },
 };
 
-module.exports = ApiControl;
+module.exports = ApiAction;

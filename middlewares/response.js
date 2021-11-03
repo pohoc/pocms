@@ -8,7 +8,7 @@ const responseHandler = (ctx) => {
   if (ctx.result !== undefined) {
     ctx.body = {
       code: 0,
-      msg: ctx.msg || '',
+      msg: ctx.msg || 'OK',
       data: ctx.result
     }
   }else{

@@ -8,4 +8,10 @@ let ApiRouter = new Router({
 ApiRouter.post('/account/login', controllers.account.login)
 ApiRouter.post('/account/register', controllers.account.register)
 
+ApiRouter.get('/business/get_business', controllers.business.get_business)
+ApiRouter.post('/business/update_business', controllers.business.update_business)
+ApiRouter.post('/business/del_business', controllers.business.del_business)
+ApiRouter.post('/business/add_business', controllers.business.add_business)
+ApiRouter.get('/business/get_business_info', controllers.business.get_business_info)
+
 module.exports = ApiRouter;
