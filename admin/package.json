@@ -1,0 +1,37 @@
+{
+  "name": "Kefu",
+  "version": "0.1.0",
+  "author": "pohoc",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "dev": "pm2 start ecosystem.config.js --env dev",
+    "test": "pm2 start ecosystem.config.js --env test",
+    "pro": "pm2 start ecosystem.config.js --env pro",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop ecosystem.config.js"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "async": "^2.6.1",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "glob": "^7.1.7",
+    "koa": "^2.6.2",
+    "koa-art-template": "^1.1.1",
+    "koa-body": "^4.2.0",
+    "koa-favicon": "^2.1.0",
+    "koa-helmet": "^4.1.0",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^3.5.1",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-static-cache": "^5.1.2",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^3.0.6",
+    "mysql": "^2.18.1",
+    "redis": "^3.1.2",
+    "string-random": "^0.1.3"
+  }
+}
