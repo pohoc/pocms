@@ -7,6 +7,7 @@ let ApiRouter = new Router({
 
 ApiRouter.post('/account/login', controllers.account.login)
 ApiRouter.post('/account/register', controllers.account.register)
+ApiRouter.get('/account/get_user_info', controllers.account.get_user_info)
 
 ApiRouter.get('/business/get_business', controllers.business.get_business)
 ApiRouter.post('/business/update_business', controllers.business.update_business)

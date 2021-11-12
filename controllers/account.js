@@ -19,6 +19,7 @@ account.login = async (ctx, next) => {
     ctx.msg = "请传递参数";
     return next();
   }
+
   // 查看账户是否被锁定
   const times = await action.isLoginLock(username);
   if (times) {
@@ -49,14 +50,14 @@ account.login = async (ctx, next) => {
       access_token: jwt.sign(
         {
           data: {
-            id: user.id
+            id: user.id,
           },
           // 设置 token 过期时间
           exp: Math.floor(Date.now() / 1000) + 60 * 60, // 60 seconds * 60 minutes = 1 hour
         },
         config.secret
-      )
-    }
+      ),
+    };
   }
   return next();
 };
@@ -64,11 +65,27 @@ account.login = async (ctx, next) => {
 account.register = async (ctx, next) => {
   // 校验接口是否开启
   if (!(await apiState.checkState("register"))) {
-    console.log(1)
     throw new ForbiddenError();
   }
 
   // ctx.body = "2";
+  return next();
+};
+
+account.get_user_info = async (ctx, next) => {
+  // 校验接口是否开启
+  if (!(await apiState.checkState("get_user_info"))) {
+    throw new ForbiddenError();
+  }
+
+  const user_id =  ctx.jwtData.data.id
+
+  const info = await action.getInfoByJson(user_id);
+  if(!info){
+    ctx.code = 10001;
+    ctx.msg = "未获取到用户信息";
+  }
+  ctx.result = info
   return next();
 };
 

@@ -3,12 +3,22 @@ const { ForbiddenError } = require("../lib/error");
 
 // 定义允许直接访问的url
 const allowEntitles = ["account", "business"];
-const allowEnNames = ["login", "register", "add_business", "update_business", "del_business", "get_business", "get_business_info"];
+const allowEnNames = [
+  "login",
+  "register",
+  "get_user_info",
+  "add_business",
+  "update_business",
+  "del_business",
+  "get_business",
+  "get_business_info",
+];
 
 // API方法拦截
 const UserFilter = async (ctx, next) => {
   await next();
-  let url = ctx._matchedRoute; // ctx.originalUrl;
+  let url = ctx._matchedRoute ? ctx._matchedRoute : ctx.originalUrl;
+
   let Titles = utils.stringArr(url, 3);
   let Names = utils.stringArr(url, 4);
 
