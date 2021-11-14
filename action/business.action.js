@@ -1,6 +1,7 @@
 const Mysql = require("../lib/mysql");
-const DB = new Mysql("pophp_business");
-
+const config = require("../config");
+const base = config.mysql.base+'business'
+const DB = new Mysql(base);
 const { logger } = require("../middlewares/logger");
 const Business = require("../models/business.model");
 const BusinessModel = new Business(DB);

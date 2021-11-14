@@ -1,5 +1,7 @@
 const Mysql = require('../lib/mysql');
-const DB = new Mysql('pophp_log');
+const config = require("../config");
+const base = config.mysql.base+'log'
+const DB = new Mysql(base);
 const LogModel = require('../models/log.model')(DB);
 
 const LogControl = {

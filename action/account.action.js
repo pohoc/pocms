@@ -1,10 +1,11 @@
-const Mysql = require("../lib/mysql");
+const Mysql = require('../lib/mysql');
 const RD = require("../lib/redis");
 const crypto = require("../lib/crypto");
-const DB = new Mysql("pophp_admin");
+const config = require("../config");
+const base = config.mysql.base+'admin'
+const DB = new Mysql(base);
 const AccountModel = require("../models/account.model")(DB);
 const { logger } = require("../middlewares/logger");
-const config = require("../config");
 
 const UserAction = {
   /**

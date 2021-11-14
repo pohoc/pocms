@@ -7,6 +7,7 @@ const allowEnNames = [
   "login",
   "register",
   "get_user_info",
+  "get_user_role",
   "add_business",
   "update_business",
   "del_business",

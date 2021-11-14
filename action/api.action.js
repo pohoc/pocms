@@ -1,5 +1,7 @@
 const Mysql = require('../lib/mysql');
-const DB = new Mysql('pophp_api');
+const config = require("../config");
+const base = config.mysql.base +'api'
+const DB = new Mysql(base);
 const ApiModel = require('../models/api.model')(DB);
 
 const ApiAction = {

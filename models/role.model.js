@@ -4,7 +4,7 @@ const { logger } = require('../middlewares/logger')
  * 登录相关的数据库操作
  * @param DB
  */
-const account = DB => {
+const role = DB => {
   return {
     async add(info) {
       try {
@@ -51,4 +51,4 @@ const account = DB => {
   }
 }
 
-module.exports = account;
+module.exports = role;
