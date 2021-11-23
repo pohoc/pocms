@@ -2,12 +2,13 @@ const utils = require("../lib/utils");
 const { ForbiddenError } = require("../lib/error");
 
 // 定义允许直接访问的url
-const allowEntitles = ["account", "business"];
+const allowEntitles = ["account", "admin", "business"];
 const allowEnNames = [
   "login",
   "register",
-  "get_user_info",
-  "get_user_role",
+  "get_admin_info",
+  "get_admin_role",
+  "get_admin",
   "add_business",
   "update_business",
   "del_business",

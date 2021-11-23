@@ -73,43 +73,4 @@ account.register = async (ctx, next) => {
   return next();
 };
 
-account.get_user_info = async (ctx, next) => {
-  // 校验接口是否开启
-  if (!(await apiState.checkState("get_user_info"))) {
-    throw new ForbiddenError();
-  }
-
-  const user_id = ctx.jwtData.data.id;
-  const info = await action.getInfoByJson(user_id);
-  const roleInfo = await role.getRoleInfoJson(user_id);
-
-  if (!info) {
-    ctx.code = 10001;
-    ctx.msg = "未获取到用户信息";
-  }
-
-  ctx.result = {
-    info,
-    roleInfo
-  }
-  return next();
-};
-
-account.get_user_role = async (ctx, next) => {
-  // 校验接口是否开启
-  if (!(await apiState.checkState("get_user_role"))) {
-    throw new ForbiddenError();
-  }
-
-  // const user_id = ctx.jwtData.data.id;
-  // const info = await role.getRoleInfoJson(user_id);
-
-  // if (!info) {
-  //   ctx.code = 10001;
-  //   ctx.msg = "未获取到用户信息";
-  // }
-  // ctx.result = info;
-  return next();
-};
-
 module.exports = account;
