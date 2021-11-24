@@ -1,7 +1,7 @@
 const koaJwt = require("koa-jwt");
 const jwt = require("jsonwebtoken");
 const config = require("../config");
-const { ForbiddenError, InvalidQueryError } = require("../lib/error");
+const { ForbiddenError } = require("../lib/error");
 const jwtBase = koaJwt({ secret: config.secret }).unless({
   path: [/\/register/, /\/login/],
 });

@@ -1,7 +1,7 @@
 const { logger } = require("../middlewares/logger");
 const Model = require("./base.model.class");
 
-class business extends Model {
+class admin extends Model {
   constructor(DB) {
     super(DB);
   }
@@ -31,7 +31,7 @@ class business extends Model {
     try {
       let where = "",
         tableName = info.base;
-      if (info) where = `WHERE business_name like '%${info.business_name}%'`;
+      if (info.name) where = `WHERE name like '%${info.name}%'`;
       const sqlMod = `SELECT COUNT(*) as count FROM ${tableName} ${where}`;
       const rs = await super.query(sqlMod);
       return !!rs ? rs.count : 0;
@@ -39,6 +39,14 @@ class business extends Model {
       logger.error(err);
     }
   }
+
+  async getRowsByJson(id) {
+    try {
+      return (res = await this.DB.fetchRow(id));
+    } catch (err) {
+      logger.error(err);
+    }
+  }
 }
 
-module.exports = business;
+module.exports = admin;

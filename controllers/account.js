@@ -2,9 +2,8 @@ const jwt = require("jsonwebtoken");
 const config = require("../config");
 const apiState = require("../action/api.action");
 const action = require("../action/account.action");
-const role = require("../action/role.action");
-const log = require("../action/log.action");
-const { ForbiddenError, InvalidQueryError } = require("../lib/error");
+const logAction = require("../action/log.action");
+const { ForbiddenError } = require("../lib/error");
 const utils = require("../lib/utils");
 const account = {};
 account.login = async (ctx, next) => {
@@ -37,13 +36,17 @@ account.login = async (ctx, next) => {
   } else {
     delete user.password;
     // 记入登录日志
-    await log.SetInfo({
+    await logAction.SetInfo({
       uid: user.id,
       name: user.username,
       client: client,
       type: "login",
       ip: utils.getClientIP(ctx.req),
       remark: "登录成功",
+    });
+    await action.uploadUserInfo(user.id, {
+      login_time: Math.round(new Date() / 1000),
+      last_login_time: user.login_time
     });
     // 封装token
     ctx.result = {

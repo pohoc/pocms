@@ -3,8 +3,7 @@ const config = require("../config");
 const apiState = require("../action/api.action");
 const BusinessAction = require("../action/business.action");
 const log = require("../action/log.action");
-const { ForbiddenError, InvalidQueryError } = require("../lib/error");
-const utils = require("../lib/utils");
+const { ForbiddenError } = require("../lib/error");
 const business = {};
 business.add_business = async (ctx, next) => {
   // 校验接口是否开启
@@ -137,7 +136,6 @@ business.get_business = async (ctx, next) => {
   if (!(await apiState.checkState("get_business"))) {
     throw new ForbiddenError();
   }
-  console.log(ctx.jwtData)
 
   const { page = 1, size = 10, keyword } = ctx.request.query;
   const pageIndex = parseInt(page);
@@ -151,7 +149,7 @@ business.get_business = async (ctx, next) => {
   ctx.result = {
     list: list,
     total: count,
-    total_page: parseFloat(count / pageSize),
+    total_page: Math.ceil(count / pageSize),
   };
 
   return next();

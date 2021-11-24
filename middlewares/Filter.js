@@ -1,5 +1,5 @@
 const utils = require("../lib/utils");
-const { ForbiddenError } = require("../lib/error");
+const { InvalidQueryError } = require("../lib/error");
 
 // 定义允许直接访问的url
 const allowEntitles = ["account", "admin", "business"];
@@ -9,6 +9,7 @@ const allowEnNames = [
   "get_admin_info",
   "get_admin_role",
   "get_admin",
+  "info_admin",
   "add_business",
   "update_business",
   "del_business",
@@ -25,10 +26,10 @@ const UserFilter = async (ctx, next) => {
   let Names = utils.stringArr(url, 4);
 
   if (allowEntitles.indexOf(Titles) == -1) {
-    throw new ForbiddenError();
+    throw new InvalidQueryError();
   }
   if (allowEnNames.indexOf(Names) == -1) {
-    throw new ForbiddenError();
+    throw new InvalidQueryError();
   }
 };
 

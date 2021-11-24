@@ -2,7 +2,6 @@ const Mysql = require("../lib/mysql");
 const config = require("../config");
 const base = config.mysql.base+'business'
 const DB = new Mysql(base);
-const { logger } = require("../middlewares/logger");
 const Business = require("../models/business.model");
 const BusinessModel = new Business(DB);
 const BaseAction = require("./base.action.class");
@@ -21,7 +20,7 @@ class BusinessAction extends BaseAction {
    */
   async getInfoByList({ pageIndex, pageSize, keyword }) {
     const info = {
-      tableName: "pophp_business",
+      tableName: base,
       whereJson: {
         and: {
           is_delete: 0,
@@ -33,7 +32,7 @@ class BusinessAction extends BaseAction {
       limitArr: [(pageIndex - 1) * pageSize, pageSize],
     };
     if (!keyword) {
-      delete info.whereJson.and.business_name;
+      delete info.whereJson.like.business_name;
     }
     return await this.Model.fetchAll(info);
   }
@@ -45,6 +44,7 @@ class BusinessAction extends BaseAction {
   async countBusiness({ keyword }) {
     const info = {
       business_name: `%${keyword}%`,
+      base
     };
     if (!keyword) {
       delete info.business_name;
