@@ -10,6 +10,7 @@ const allowEnNames = [
   "get_admin_role",
   "get_admin",
   "info_admin",
+  "add_admin",
   "add_business",
   "update_business",
   "del_business",

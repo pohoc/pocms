@@ -5,6 +5,7 @@ const DB = new Mysql(base);
 const Admin = require("../models/Admin.model");
 const AdminModel = new Admin(DB);
 const BaseAction = require("./base.action.class");
+const utils = require("../lib/utils");
 
 class AdminAction extends BaseAction {
   constructor(model) {
@@ -30,6 +31,7 @@ class AdminAction extends BaseAction {
     if (!keyword) {
       delete info.whereJson.like.name;
     }
+    
     return await this.Model.fetchAll(info);
   }
   /**
@@ -51,6 +53,10 @@ class AdminAction extends BaseAction {
   async getInfoByJson(id) {
     return await this.Model.getRowsByJson({ id });
   }
+  async addInfo(info) {
+    return await this.Model.add(utils.deleteEmptyProperty(info));
+  }
+  
 }
 
 module.exports = new AdminAction(AdminModel);

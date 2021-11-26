@@ -27,7 +27,6 @@ account.login = async (ctx, next) => {
     ctx.msg = "你试图在破解密码，请3个小时后再试";
     return next();
   }
-
   const user = await action.checkPass(username, action.cryptPass(password));
   if (!user) {
     await action.setTimeRedis(username);
@@ -44,6 +43,7 @@ account.login = async (ctx, next) => {
       ip: utils.getClientIP(ctx.req),
       remark: "登录成功",
     });
+    console.log(user.login_time)
     await action.uploadUserInfo(user.id, {
       login_time: Math.round(new Date() / 1000),
       last_login_time: user.login_time

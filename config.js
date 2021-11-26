@@ -15,6 +15,7 @@ module.exports = {
     port: process.env.APP_MYSQL_PORT,
     database: process.env.APP_MYSQL_DATABASE,
     base: process.env.APP_MYSQL_BASE,
+    timezone: "08:00"
   },
   redis: {
     host: process.env.APP_REDIS_HOST,

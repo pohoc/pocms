@@ -1,7 +1,9 @@
 const apiState = require("../action/api.action");
 const adminAction = require("../action/admin.action");
 const roleAction = require("../action/role.action");
-const { ForbiddenError } = require("../lib/error");
+const accountAction = require("../action/account.action")
+const { ForbiddenError, AuthenticationError } = require("../lib/error");
+const regular = require("../lib/regular")
 const admin = {};
 
 admin.get_admin_info = async (ctx, next) => {
@@ -76,22 +78,60 @@ admin.info_admin = async (ctx, next) => {
 
 admin.add_admin = async (ctx, next) => {
   // 校验接口是否开启
-  if (!(await apiState.checkState("info_admin"))) {
+  if (!(await apiState.checkState("add_admin"))) {
     throw new ForbiddenError();
   }
   const { username, password, phone, name, expire_time, avatar, role_id } = ctx.request.body;
 
-  if (!id) {
+  if (!username && !password && !phone && !name) {
     ctx.code = 10001;
     ctx.msg = "请传递参数";
     return next();
   }
-  const info = await adminAction.getInfoByJson(id);
-  if (!info) {
+
+  if(!regular.isEmpty(username) && !regular.isRegisterUserName(username)){
     ctx.code = 10001;
-    ctx.msg = "未获取到用户信息";
+    ctx.msg = "用户名不能为空";
+    return next();
   }
-  ctx.result = info;
+
+  if(!regular.isMobile(phone)){
+    ctx.code = 10001;
+    ctx.msg = "手机号不正确";
+    return next();
+  }
+
+  if(!password.length > 6 && !regular.isPass(password)){
+    ctx.code = 10001;
+    ctx.msg = "密码不正确";
+    return next();
+  }
+
+  const checkUserName = await accountAction.checkInfo({username});
+  if (!!checkUserName) {
+    ctx.code = 10001;
+    ctx.msg = '账号已存在';
+    return next();
+  }
+
+  const info = await adminAction.addInfo({
+    username,
+    password: accountAction.cryptPass(password),
+    phone,
+    name,
+    expire_time,
+    avatar,
+    role_id,
+    add_time: Math.round(new Date() / 1000),
+  });
+  if (!info.insertId) {
+    ctx.code = 10002;
+    ctx.msg = "添加失败";
+    return next();
+  }
+
+  ctx.msg = "添加成功";
+  ctx.result = true;
   return next();
 };
 

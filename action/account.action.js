@@ -33,7 +33,7 @@ const UserAction = {
     }
   },
   cryptPass: (password) => {
-    return password; // crypto.md5(crypto.aesDecrypt(password)).toString();
+    return crypto.md5(password).toString();
   },
   cryptSession: (hash) => {
     return crypto.md5(hash).toString();
