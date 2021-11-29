@@ -13,10 +13,12 @@ admin.get_admin_info = async (ctx, next) => {
   }
   const user_id = ctx.jwtData.data.id;
   const info = await adminAction.getInfoByJson(user_id);
+  const role = await roleAction.getRoleInfoJson(user_id);
   if (!info) {
     ctx.code = 10001;
     ctx.msg = "未获取到用户信息";
   }
+  info.role = role
   ctx.result = info;
   return next();
 };
