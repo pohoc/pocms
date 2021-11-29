@@ -43,7 +43,6 @@ account.login = async (ctx, next) => {
       ip: utils.getClientIP(ctx.req),
       remark: "登录成功",
     });
-    console.log(user.login_time)
     await action.uploadUserInfo(user.id, {
       login_time: Math.round(new Date() / 1000),
       last_login_time: user.login_time
@@ -57,7 +56,7 @@ account.login = async (ctx, next) => {
             id: user.id,
           },
           // 设置 token 过期时间
-          exp: Math.floor(Date.now() / 1000) + 60 * 60, // 60 seconds * 60 minutes = 1 hour
+          exp: Math.floor(new Date() / 1000) + 60 * 60, // 60 seconds * 60 minutes = 1 hour
         },
         config.secret
       ),

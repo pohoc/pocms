@@ -18,20 +18,30 @@ class AdminAction extends BaseAction {
    * @param {关键词} keyword
    * @returns
    */
-  async getAdminJson({ pageIndex, pageSize, keyword }) {
+  async getAdminJson({ pageIndex, pageSize, username, phone, status }) {
     const info = {
       tableName: base,
       whereJson: {
         like: {
-          name: `%${keyword}%`,
+          username: `%${username}%`,
+          phone: `%${phone}%`,
         },
+        and: {
+          status,
+        }
       },
       limitArr: [(pageIndex - 1) * pageSize, pageSize],
     };
-    if (!keyword) {
-      delete info.whereJson.like.name;
+    if (!username) {
+      delete info.whereJson.like.username;
     }
-    
+    if (!phone) {
+      delete info.whereJson.like.phone;
+    }
+    if (!status) {
+      delete info.whereJson.and.status;
+    }
+
     return await this.Model.fetchAll(info);
   }
   /**

@@ -41,11 +41,15 @@ admin.get_admin = async (ctx, next) => {
   if (!(await apiState.checkState("get_admin"))) {
     throw new ForbiddenError();
   }
-  const { page = 1, size = 10, keyword } = ctx.request.query;
+  const { page = 1, size = 10, username, phone, status } = ctx.request.query;
   const pageIndex = parseInt(page);
   const pageSize = parseInt(size);
+
   let params = { pageIndex, pageSize };
-  if (keyword) params = Object.assign(params, { keyword });
+  if (username) params = Object.assign(params, { username }); 
+  if (phone) params = Object.assign(params, { phone });
+  if (status) params = Object.assign(params, { status });
+
   const list = await adminAction.getAdminJson(params);
   const count = await adminAction.countAdmin(params);
   ctx.result = {
