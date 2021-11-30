@@ -2,27 +2,31 @@ const koaJwt = require("koa-jwt");
 const jwt = require("jsonwebtoken");
 const config = require("../config");
 const { AuthenticationError } = require("../lib/error");
-// const ApiAction = require("../action/api.action");
-// const utils = require("../lib/utils");
+const ApiAction = require("../action/api.action");
+const utils = require("../lib/utils");
 
-// const jwtBase = koaJwt({ secret: config.secret }).unless({
-//   custom: (ctx) => {
-//     ApiAction.getWhite().then((res) => {
-//       const White = utils.api_array_maps(res);
-//       const url = ctx.path;
-//       let Names = utils.stringArr(url, 4);
-//       if (White.indexOf(Names) === -1) {
-//         return true;
-//       } else {
-//         return false;
-//       }
-//     });
-//   },
-// });
-
+/**
+ * 实现数据库管理白名单
+ */
 const jwtBase = koaJwt({ secret: config.secret }).unless({
-  path: [/\/register/, /\/login/],
+  custom: async (ctx) => {
+    const Whites = utils.api_array_maps(await ApiAction.getWhite());
+    const url = ctx.path;
+    let Names = utils.stringArr(url, 4);
+    if (Whites.indexOf(Names) === -1) {
+      return false;
+    } else {
+      return true;
+    }
+  },
 });
+
+/**
+ * 静态管理白名单(停用)
+ */
+// const jwtBase = koaJwt({ secret: config.secret }).unless({
+//   path: [/\/register/, /\/login/],
+// });
 
 const jwtFilter = async (ctx, next) => {
   if (typeof ctx.request.headers.authorization === "string") {
