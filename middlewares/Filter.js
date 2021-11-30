@@ -1,27 +1,14 @@
 const utils = require("../lib/utils");
 const { InvalidQueryError } = require("../lib/error");
-
-// 定义允许直接访问的url
-const allowEntitles = ["account", "admin", "business"];
-const allowEnNames = [
-  "login",
-  "register",
-  "get_admin_info",
-  "get_admin_role",
-  "get_admin",
-  "info_admin",
-  "add_admin",
-  "add_business",
-  "update_business",
-  "del_business",
-  "get_business",
-  "get_business_info",
-];
+const ApiAction = require("../action/api.action")
 
 // API方法拦截
 const UserFilter = async (ctx, next) => {
   await next();
   let url = ctx._matchedRoute ? ctx._matchedRoute : ctx.originalUrl;
+
+  const allowEntitles = utils.api_array_maps(await ApiAction.getEnTitles())
+  const allowEnNames = utils.api_array_maps(await ApiAction.getEnNames())
 
   let Titles = utils.stringArr(url, 3);
   let Names = utils.stringArr(url, 4);

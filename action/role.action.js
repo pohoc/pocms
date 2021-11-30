@@ -16,7 +16,7 @@ class RoleAction extends BaseAction {
    * @returns
    */
   async getRoleInfoJson(id) {
-    const where = `SELECT per.* FROM po_admin su JOIN po_role_permission ro on su.role_id=ro.role_id JOIN po_permission per on ro.permission_id = per.id and su.id=${id}`;
+    const where = `SELECT per.* FROM po_admin su JOIN po_role_permission ro on su.role_id=ro.role_id or su.id=ro.admin_id JOIN po_permission per on ro.permission_id = per.id and su.id=${id}`;
     return await this.Model.roleJson(where);
   }
 }

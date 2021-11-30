@@ -3,6 +3,7 @@ const config = require("../config");
 const apiState = require("../action/api.action");
 const action = require("../action/account.action");
 const logAction = require("../action/log.action");
+const roleAction = require("../action/role.action");
 const { ForbiddenError } = require("../lib/error");
 const utils = require("../lib/utils");
 const account = {};
@@ -11,6 +12,7 @@ account.login = async (ctx, next) => {
   if (!(await apiState.checkState("login"))) {
     throw new ForbiddenError();
   }
+  
   const { username, password } = ctx.request.body;
   const client = ctx.request.headers["user-agent"];
   // 判断是否传入值
@@ -72,6 +74,23 @@ account.register = async (ctx, next) => {
   }
 
   // ctx.body = "2";
+  return next();
+};
+
+account.get_admin_info = async (ctx, next) => {
+  // 校验接口是否开启
+  if (!(await apiState.checkState("get_admin_info"))) {
+    throw new ForbiddenError();
+  }
+  const user_id = ctx.jwtData.data.id;
+  const info = await action.getInfoByJson(user_id);
+  const role = await roleAction.getRoleInfoJson(user_id);
+  if (!info) {
+    ctx.code = 10001;
+    ctx.msg = "未获取到用户信息";
+  }
+  info.role = role
+  ctx.result = info;
   return next();
 };
 

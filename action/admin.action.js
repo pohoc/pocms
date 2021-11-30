@@ -59,10 +59,7 @@ class AdminAction extends BaseAction {
     }
     return await this.Model.countAll(info);
   }
-
-  async getInfoByJson(id) {
-    return await this.Model.getRowsByJson({ id });
-  }
+  
   async addInfo(info) {
     return await this.Model.add(utils.deleteEmptyProperty(info));
   }

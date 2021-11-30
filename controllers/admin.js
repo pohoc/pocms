@@ -1,42 +1,9 @@
 const apiState = require("../action/api.action");
 const adminAction = require("../action/admin.action");
-const roleAction = require("../action/role.action");
 const accountAction = require("../action/account.action")
-const { ForbiddenError, AuthenticationError } = require("../lib/error");
+const { ForbiddenError } = require("../lib/error");
 const regular = require("../lib/regular")
 const admin = {};
-
-admin.get_admin_info = async (ctx, next) => {
-  // 校验接口是否开启
-  if (!(await apiState.checkState("get_admin_info"))) {
-    throw new ForbiddenError();
-  }
-  const user_id = ctx.jwtData.data.id;
-  const info = await adminAction.getInfoByJson(user_id);
-  const role = await roleAction.getRoleInfoJson(user_id);
-  if (!info) {
-    ctx.code = 10001;
-    ctx.msg = "未获取到用户信息";
-  }
-  info.role = role
-  ctx.result = info;
-  return next();
-};
-
-admin.get_admin_role = async (ctx, next) => {
-  // 校验接口是否开启
-  if (!(await apiState.checkState("get_admin_role"))) {
-    throw new ForbiddenError();
-  }
-  const user_id = ctx.jwtData.data.id;
-  const info = await roleAction.getRoleInfoJson(user_id);
-  if (!info) {
-    ctx.code = 10001;
-    ctx.msg = "未获取到用户信息";
-  }
-  ctx.result = info;
-  return next();
-};
 
 admin.get_admin = async (ctx, next) => {
   // 校验接口是否开启
