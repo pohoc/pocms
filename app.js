@@ -26,10 +26,18 @@ app.use(loggerMiddleware);
 app.use(errorHandler);
 
 // Global Middlewares 
+
 // 解析资源
 app.use(bodyParser);
+
 // 静态资源中间件
 app.use(staticCache(config.publicDir));
+
+// 静态目录
+app.use(koaStatic('./', { maxAge: 60000 * 1440 * 30 }));
+
+// 网站图标
+app.use(favicon(path.join(__dirname, './public/images/favicon.ico')));
 
 // Helmet 提升安全性
 app.use(helmet());
@@ -46,18 +54,10 @@ jwtMiddleware(app)
 // Routes 路由中间件
 app.use(ApiV1Router.routes(), ApiV1Router.allowedMethods()); // RESTFUL API V1
 
-// 静态目录
-app.use(koaStatic(path.join(__dirname, '../public/'), { maxAge: 60000 * 1440 * 30 }));
-
-// 网站图标
-app.use(favicon(path.join(__dirname, '../public/images/favicon.ico')));
-
 // Response 数据响应
 app.use(responseHandler);
 
 // Database 数据库连接
 database(app);
-
-
 
 module.exports = app;

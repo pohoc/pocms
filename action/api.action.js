@@ -16,6 +16,7 @@ const ApiAction = {
   },
   /**
    * 获取接口title
+   * @returns 
    */
   getEnTitles: async () => {
     const info = {
@@ -33,11 +34,11 @@ const ApiAction = {
         ],
       },
     };
-    let data = await ApiModel.getByTitlesJson(info);
-    return data;
+    return await ApiModel.getByApiJson(info);
   },
   /**
    * 获取接口name
+   * @returns 
    */
   getEnNames: async () => {
     const info = {
@@ -56,9 +57,31 @@ const ApiAction = {
         ],
       },
     };
-    let data = await ApiModel.getByTitlesJson(info);
-    return data;
+    return await ApiModel.getByApiJson(info);
   },
+  /**
+   * 获取api白名单
+   * @returns 
+   */
+  getWhite: async () => {
+    const info = {
+      tableName: base,
+      whereJson: {
+        and: [
+          {
+            name: "status",
+            key: 1,
+          },
+          {
+            name: "token",
+            mark: "<>",
+            key: 1,
+          },
+        ],
+      },
+    };
+    return await ApiModel.getByApiJson(info);
+  }
 };
 
 module.exports = ApiAction;

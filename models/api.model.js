@@ -19,10 +19,10 @@ const api = DB => {
       }
     },
     /**
-     * 获取接口titles
+     * 获取接口json
      * @returns 
      */
-    async getByTitlesJson(info) {
+    async getByApiJson(info) {
       try {
         const {
           tableName,

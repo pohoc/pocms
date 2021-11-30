@@ -11,7 +11,8 @@ const responseHandler = (ctx) => {
       msg: ctx.msg || 'OK',
       data: ctx.result
     }
-  }else{
+  }
+  else{
     ctx.body = {
       code: ctx.code || -1,
       msg: ctx.msg || '接口未返回数据',

@@ -26,9 +26,12 @@ class AdminAction extends BaseAction {
           username: `%${username}%`,
           phone: `%${phone}%`,
         },
-        and: {
-          status,
-        }
+        and: [
+          {
+            name: 'status',
+            key: status
+          }
+        ]
       },
       limitArr: [(pageIndex - 1) * pageSize, pageSize],
     };
@@ -39,9 +42,11 @@ class AdminAction extends BaseAction {
       delete info.whereJson.like.phone;
     }
     if (!status) {
-      delete info.whereJson.and.status;
+      info.whereJson.and.forEach((item, key)=>{
+        if(item.name === 'status')
+        delete info.whereJson.and[key];
+      })
     }
-
     return await this.Model.fetchAll(info);
   }
   /**
