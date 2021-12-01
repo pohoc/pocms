@@ -3,8 +3,6 @@ const adminAction = require("../action/admin.action");
 const accountAction = require("../action/account.action")
 const { ForbiddenError } = require("../lib/error");
 const regular = require("../lib/regular")
-const path = require('path')
-const fse = require('fs-extra')
 const admin = {};
 
 admin.get_admin = async (ctx, next) => {
@@ -167,7 +165,7 @@ admin.upload_admin = async (ctx, next) =>{
 
   ctx.msg = "上传成功";
   ctx.result = {
-    file: ctx.request.files.path
+    file: ctx.request.files.file.path
   };
   return next();
 }

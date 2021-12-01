@@ -1,6 +1,5 @@
 const Router = require('koa-router')
 const controllers = require('../controllers')
-const upload = require("../lib/upload")
 
 
 let ApiRouter = new Router({
