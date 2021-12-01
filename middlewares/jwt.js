@@ -35,19 +35,19 @@ const jwtFilter = async (ctx, next) => {
       ctx.jwtData = jwt.verify(token, config.secret);
     } catch (error) {
       if (error.message === "jwt expired") {
-        ctx.status = 500;
+        ctx.status = 200;
         ctx.body = {
           code: 500,
           msg: "token 过期",
         };
       } else if (error.message === "jwt malformed") {
-        ctx.status = 500;
+        ctx.status = 200;
         ctx.body = {
           code: 500,
           msg: "令牌无效",
         };
       } else {
-        ctx.status = 500;
+        ctx.status = 200;
         ctx.body = {
           code: 500,
           msg: error.message,

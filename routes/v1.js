@@ -1,5 +1,7 @@
 const Router = require('koa-router')
 const controllers = require('../controllers')
+const upload = require("../lib/upload")
+
 
 let ApiRouter = new Router({
   prefix:'/restful/v1'
@@ -12,9 +14,9 @@ ApiRouter.get('/account/get_admin_info', controllers.account.get_admin_info)
 ApiRouter.get('/admin/get_admin', controllers.admin.get_admin)
 ApiRouter.get('/admin/info_admin', controllers.admin.info_admin)
 ApiRouter.post('/admin/add_admin', controllers.admin.add_admin)
-ApiRouter.get('/admin/edit_admin', controllers.admin.edit_admin)
-ApiRouter.get('/admin/del_admin', controllers.admin.del_admin)
-
+ApiRouter.post('/admin/edit_admin', controllers.admin.edit_admin)
+ApiRouter.post('/admin/del_admin', controllers.admin.del_admin)
+ApiRouter.post('/admin/upload_admin', controllers.admin.upload_admin)
 
 
 

@@ -5,7 +5,11 @@ class admin extends Model {
   constructor(DB) {
     super(DB);
   }
-
+  /**
+   * 数据分页模型
+   * @param {*} info 
+   * @returns 
+   */
   async fetchAll(info) {
     try {
       const {
@@ -26,7 +30,11 @@ class admin extends Model {
       logger.error(err);
     }
   }
-
+  /**
+   * 统计数据模型
+   * @param {*} info 
+   * @returns 
+   */
   async countAll(info) {
     try {
       let where = "",
@@ -35,14 +43,6 @@ class admin extends Model {
       const sqlMod = `SELECT COUNT(*) as count FROM ${tableName} ${where}`;
       const rs = await super.query(sqlMod);
       return !!rs ? rs.count : 0;
-    } catch (err) {
-      logger.error(err);
-    }
-  }
-
-  async getRowsByJson(id) {
-    try {
-      return (res = await this.DB.fetchRow(id));
     } catch (err) {
       logger.error(err);
     }

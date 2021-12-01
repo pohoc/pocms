@@ -3,6 +3,8 @@ const adminAction = require("../action/admin.action");
 const accountAction = require("../action/account.action")
 const { ForbiddenError } = require("../lib/error");
 const regular = require("../lib/regular")
+const path = require('path')
+const fse = require('fs-extra')
 const admin = {};
 
 admin.get_admin = async (ctx, next) => {
@@ -45,6 +47,7 @@ admin.info_admin = async (ctx, next) => {
     ctx.code = 10001;
     ctx.msg = "未获取到用户信息";
   }
+  delete info.password;
   ctx.result = info;
   return next();
 };
@@ -110,42 +113,63 @@ admin.add_admin = async (ctx, next) => {
 
 admin.edit_admin = async (ctx, next) => {
   // 校验接口是否开启
-  if (!(await apiState.checkState("info_admin"))) {
+  if (!(await apiState.checkState("edit_admin"))) {
     throw new ForbiddenError();
   }
-  const { id } = ctx.request.query;
-  if (!id) {
-    ctx.code = 10001;
-    ctx.msg = "请传递参数";
+
+  const { username, phone, name, avatar, role_id, expire_time, status, id } = ctx.request.body;
+
+  const info = {username, phone, name, avatar, role_id, expire_time, status};
+  const rs = await adminAction.uploadUserInfo(id, info);
+
+  if (rs.affectedRows != 1) {
+    ctx.code = 10002;
+    ctx.msg = "更新失败";
     return next();
   }
-  const info = await adminAction.getInfoByJson(id);
-  if (!info) {
-    ctx.code = 10001;
-    ctx.msg = "未获取到用户信息";
-  }
-  ctx.result = info;
+
+  ctx.msg = "更新成功";
+  ctx.result = true;
   return next();
 };
 
 admin.del_admin = async (ctx, next) => {
   // 校验接口是否开启
-  if (!(await apiState.checkState("info_admin"))) {
+  if (!(await apiState.checkState("del_admin"))) {
     throw new ForbiddenError();
   }
-  const { id } = ctx.request.query;
+  const { id } = ctx.request.body;
   if (!id) {
     ctx.code = 10001;
     ctx.msg = "请传递参数";
     return next();
   }
-  const info = await adminAction.getInfoByJson(id);
-  if (!info) {
+  const info = await adminAction.delUserInfo(id);
+  if (!info.affectedRows) {
     ctx.code = 10001;
-    ctx.msg = "未获取到用户信息";
+    ctx.msg = "删除失败";
   }
-  ctx.result = info;
+  ctx.msg = "删除成功";
+  ctx.result = true;
   return next();
 };
+
+admin.upload_admin = async (ctx, next) =>{
+  // 校验接口是否开启
+  if (!(await apiState.checkState("upload_admin"))) {
+    throw new ForbiddenError();
+  }
+
+  if(!ctx.request.files){
+    ctx.code = 10001;
+    ctx.msg = "上传失败";
+  }
+
+  ctx.msg = "上传成功";
+  ctx.result = {
+    file: ctx.request.files.path
+  };
+  return next();
+}
 
 module.exports = admin;

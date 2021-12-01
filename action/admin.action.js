@@ -28,10 +28,10 @@ class AdminAction extends BaseAction {
         },
         and: [
           {
-            name: 'status',
-            key: status
-          }
-        ]
+            name: "status",
+            key: status,
+          },
+        ],
       },
       limitArr: [(pageIndex - 1) * pageSize, pageSize],
     };
@@ -42,10 +42,9 @@ class AdminAction extends BaseAction {
       delete info.whereJson.like.phone;
     }
     if (!status) {
-      info.whereJson.and.forEach((item, key)=>{
-        if(item.name === 'status')
-        delete info.whereJson.and[key];
-      })
+      info.whereJson.and.forEach((item, key) => {
+        if (item.name === "status") delete info.whereJson.and[key];
+      });
     }
     return await this.Model.fetchAll(info);
   }
@@ -57,18 +56,55 @@ class AdminAction extends BaseAction {
   async countAdmin({ keyword }) {
     const info = {
       name: `%${keyword}%`,
-      base
+      base,
     };
     if (!keyword) {
       delete info.name;
     }
     return await this.Model.countAll(info);
   }
-  
+  /**
+   * 验证用户是否存在
+   * @param {用户名} info
+   * @returns
+   */
+  async checkInfo(info) {
+    const row = await super.getRow(info);
+    return !!row;
+  }
+  /**
+   * 添加账户
+   * @param {*} info
+   * @returns
+   */
   async addInfo(info) {
     return await this.Model.add(utils.deleteEmptyProperty(info));
   }
-  
+  /**
+   * 账户详情
+   * @param {*} id
+   * @returns
+   */
+  async getInfoByJson(id) {
+    return await super.getInfo(id);
+  }
+  /**
+   * 更新账户
+   * @param {*} id
+   * @param {*} info
+   * @returns
+   */
+  async uploadUserInfo(id, info) {
+    return await super.update(id, info);
+  }
+  /**
+   * 删除账户
+   * @param {*} id
+   * @returns
+   */
+  async delUserInfo(id) {
+    return await super.del(id);
+  }
 }
 
 module.exports = new AdminAction(AdminModel);
