@@ -63,7 +63,7 @@ app.use(bodyParser);
 app.use(staticCache(config.publicDir));
 
 // 静态目录
-app.use(koaStatic("./uploads", { maxAge: 60000 * 1440 * 30 }));
+app.use(koaStatic("./public", { maxAge: 60000 * 1440 * 30 }));
 
 // 网站图标
 app.use(favicon(path.join(__dirname, "./public/images/favicon.ico")));

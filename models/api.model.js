@@ -1,26 +1,26 @@
-const { logger } = require('../middlewares/logger')
+const { logger } = require("../middlewares/logger");
 
 /**
  * 登录相关的数据库操作
  * @param DB
  */
-const api = DB => {
+const api = (DB) => {
   return {
     /**
      * 获取接口状态
-     * @param {接口名称} name 
-     * @returns 
+     * @param {接口名称} name
+     * @returns
      */
     async getState(name) {
       try {
-        return res = await DB.fetchRow({name})
+        return (res = await DB.fetchRow({ name }));
       } catch (err) {
-        logger.error(err)
+        logger.error(err);
       }
     },
     /**
      * 获取接口json
-     * @returns 
+     * @returns
      */
     async getByApiJson(info) {
       try {
@@ -39,10 +39,17 @@ const api = DB => {
           limitArr
         );
       } catch (err) {
-        logger.error(err)
+        logger.error(err);
       }
     },
-  }
-}
+    async getRouterAll() {
+      try {
+        return await DB.getAll();
+      } catch (err) {
+        logger.error(err);
+      }
+    },
+  };
+};
 
 module.exports = api;

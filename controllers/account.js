@@ -12,7 +12,7 @@ account.login = async (ctx, next) => {
   if (!(await apiState.checkState("login"))) {
     throw new ForbiddenError();
   }
-  console.log(ctx.request)
+
   const { username, password } = ctx.request.body;
   const client = ctx.request.headers["user-agent"];
   // 判断是否传入值

@@ -4,6 +4,29 @@ const base = config.mysql.base + "api";
 const DB = new Mysql(base);
 const ApiModel = require("../models/api.model")(DB);
 
+/*
+ * list 结构转 树型
+ * @param {*} menuTree
+ * @param {*} tree
+ * @param {*} parentId
+ */
+const treeMap = (menuTree, tree, parentId) => {
+  menuTree.forEach((item) => {
+    if (item.pid == parentId) {
+      const child = {
+        name: item.name,
+        method: item.method,
+        children: [],
+      };
+      treeMap(menuTree, child.children, item.id);
+      if (child.children.length == 0) {
+        delete child.children;
+      }
+      tree.push(child);
+    }
+  });
+};
+
 const ApiAction = {
   /**
    * 验证接口是否开启
@@ -16,7 +39,7 @@ const ApiAction = {
   },
   /**
    * 获取接口title
-   * @returns 
+   * @returns
    */
   getEnTitles: async () => {
     const info = {
@@ -29,7 +52,8 @@ const ApiAction = {
           },
           {
             name: "pid",
-            key: 0,
+            mark: "is null",
+            key: '',
           },
         ],
       },
@@ -38,7 +62,7 @@ const ApiAction = {
   },
   /**
    * 获取接口name
-   * @returns 
+   * @returns
    */
   getEnNames: async () => {
     const info = {
@@ -52,7 +76,7 @@ const ApiAction = {
           {
             name: "pid",
             mark: "<>",
-            key: 0,
+            key: '',
           },
         ],
       },
@@ -61,7 +85,7 @@ const ApiAction = {
   },
   /**
    * 获取api白名单
-   * @returns 
+   * @returns
    */
   getWhite: async () => {
     const info = {
@@ -81,7 +105,13 @@ const ApiAction = {
       },
     };
     return await ApiModel.getByApiJson(info);
-  }
+  },
+  getAllRouter: async () => {
+    const data = await ApiModel.getRouterAll();
+    const addRouter = [];
+    treeMap(data, addRouter, null);
+    return addRouter;
+  },
 };
 
 module.exports = ApiAction;

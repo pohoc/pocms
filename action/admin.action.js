@@ -95,7 +95,7 @@ class AdminAction extends BaseAction {
    * @returns
    */
   async uploadUserInfo(id, info) {
-    return await super.update(id, info);
+    return await super.edit(id, info);
   }
   /**
    * 删除账户

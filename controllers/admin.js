@@ -84,7 +84,7 @@ admin.add_admin = async (ctx, next) => {
   const checkUserName = await accountAction.checkInfo({username});
   if (!!checkUserName) {
     ctx.code = 10001;
-    ctx.msg = '账号已存在';
+    ctx.msg = '账户已存在';
     return next();
   }
 
@@ -117,7 +117,26 @@ admin.edit_admin = async (ctx, next) => {
 
   const { username, phone, name, avatar, role_id, expire_time, status, id } = ctx.request.body;
 
+  if (!id) {
+    ctx.code = 10001;
+    ctx.msg = "请传递参数";
+    return next();
+  }
+
+  if(regular.isEmpty(username) && !regular.isRegisterUserName(username)){
+    ctx.code = 10001;
+    ctx.msg = "用户名不能为空";
+    return next();
+  }
+
+  if(regular.isEmpty(phone) && !regular.isMobile(phone)){
+    ctx.code = 10001;
+    ctx.msg = "手机号不正确";
+    return next();
+  }
+
   const info = {username, phone, name, avatar, role_id, expire_time, status};
+
   const rs = await adminAction.uploadUserInfo(id, info);
 
   if (rs.affectedRows != 1) {

@@ -13,7 +13,7 @@ const UserFilter = async (ctx, next) => {
   
     let Titles = utils.stringArr(url, 3);
     let Names = utils.stringArr(url, 4);
-  
+    
     if (allowEntitles.indexOf(Titles) == -1) {
       throw new InvalidQueryError();
     }
