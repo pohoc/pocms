@@ -9,9 +9,8 @@ let ApiRouter = new Router({
 ApiAction.getAllRouter().then((res) => {
   res.forEach((item) => {
     item.children.forEach((items) => {
-      const url = `/${item.name}/${items.name}`; // 组合真正链接
-      const handler = `controllers.${item.name}.${items.name}`;
-      ApiRouter[items.method](url, handler); // 创建路由
+      const url = `/${item.name}/${items.name}`; // 组合链接
+      ApiRouter[items.method](url, controllers[item.name][items.name]); // 动态创建路由
     });
   });
 });
