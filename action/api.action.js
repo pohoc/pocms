@@ -53,7 +53,7 @@ const ApiAction = {
           {
             name: "pid",
             mark: "is null",
-            key: 'null',
+            key: "null",
           },
         ],
       },
@@ -76,7 +76,7 @@ const ApiAction = {
           {
             name: "pid",
             mark: "<>",
-            key: '',
+            key: "",
           },
         ],
       },
@@ -106,11 +106,56 @@ const ApiAction = {
     };
     return await ApiModel.getByApiJson(info);
   },
+  /**
+   * 获取全局路由
+   * @returns
+   */
   getAllRouter: async () => {
     const data = await ApiModel.getRouterAll();
     const addRouter = [];
     treeMap(data, addRouter, null);
     return addRouter;
+  },
+  /**
+   * 获取API 一级 JSON
+   * @param {*} pageIndex
+   * @param {*} pageSize
+   * @returns
+   */
+  getApisJson: async ({ pageIndex, pageSize }) => {
+    const info = {
+      tableName: base,
+      whereJson: {
+        and: [{
+          name: "pid",
+          mark: "is null",
+          key: 'null'
+        }]
+      },
+      limitArr: [(pageIndex - 1) * pageSize, pageSize],
+    };
+
+    return await ApiModel.fetchAll(info);
+  },
+  /**
+   * 获取API 二级 JSON
+   * @param {*} pageIndex
+   * @param {*} pageSize
+   * @returns
+   */
+  getApisByJson: async (pid) => {
+    return await ApiModel.getRowsByJson({pid});
+  },
+  /**
+   * 统计数量
+   * @param {关键词} keyword
+   * @returns
+   */
+  countApi: async () => {
+    const info = {
+      base,
+    };
+    return await ApiModel.countAll(info);
   },
 };
 

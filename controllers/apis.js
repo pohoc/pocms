@@ -1,21 +1,26 @@
-const apiState = require("../action/api.action");
-const roleAction = require("../action/role.action");
+const apiAction = require("../action/api.action");
 const { ForbiddenError } = require("../lib/error");
-const role = {};
+const apis = {};
 
-role.get_role = async (ctx, next) => {
+apis.get_apis = async (ctx, next) => {
   // 校验接口是否开启
-  if (!(await apiState.checkState("get_role"))) {
+  if (!(await apiAction.checkState("get_apis"))) {
     throw new ForbiddenError();
   }
   const { page = 1, size = 10 } = ctx.request.query;
   const pageIndex = parseInt(page);
   const pageSize = parseInt(size);
 
-  let params = { pageIndex, pageSize };
+  const params = { pageIndex, pageSize };
 
-  const list = await roleAction.getRoleJson(params);
-  const count = await roleAction.countRole(params);
+  const list = await apiAction.getApisJson(params);
+  list.forEach( async (item, key) => {
+    const data = await apiAction.getApisByJson(item.id)
+    if(data){
+      list[key].children = data
+    }
+  });
+  const count = await apiAction.countApi(params);
   ctx.result = {
     list: list,
     total: count,
@@ -24,51 +29,38 @@ role.get_role = async (ctx, next) => {
   return next();
 };
 
-role.info_role = async (ctx, next) => {
+apis.info_apis = async (ctx, next) => {
   // 校验接口是否开启
-  if (!(await apiState.checkState("info_role"))) {
+  if (!(await apiAction.checkState("info_apis"))) {
     throw new ForbiddenError();
   }
 
 };
 
-role.add_role = async (ctx, next) => {
+apis.add_apis = async (ctx, next) => {
   // 校验接口是否开启
-  if (!(await apiState.checkState("add_role"))) {
-    throw new ForbiddenError();
-  }
-
-  return next();
-};
-
-role.edit_role = async (ctx, next) => {
-  // 校验接口是否开启
-  if (!(await apiState.checkState("edit_role"))) {
+  if (!(await apiAction.checkState("add_apis"))) {
     throw new ForbiddenError();
   }
 
   return next();
 };
 
-role.del_role = async (ctx, next) => {
+apis.edit_apis = async (ctx, next) => {
   // 校验接口是否开启
-  if (!(await apiState.checkState("del_role"))) {
+  if (!(await apiAction.checkState("edit_apis"))) {
     throw new ForbiddenError();
   }
-  const { id } = ctx.request.body;
-  if (!id) {
-    ctx.code = 10001;
-    ctx.msg = "请传递参数";
-    return next();
-  }
-  const info = await roleAction.delRoleInfo(id);
-  if (!info.affectedRows) {
-    ctx.code = 10001;
-    ctx.msg = "删除失败";
-  }
-  ctx.msg = "删除成功";
-  ctx.result = true;
+
   return next();
 };
 
-module.exports = role;
+apis.del_apis = async (ctx, next) => {
+  // 校验接口是否开启
+  if (!(await apiAction.checkState("del_apis"))) {
+    throw new ForbiddenError();
+  }
+  return next();
+};
+
+module.exports = apis;
