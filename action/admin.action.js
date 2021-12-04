@@ -95,7 +95,7 @@ class AdminAction extends BaseAction {
    * @returns
    */
   async uploadUserInfo(id, info) {
-    return await super.edit(id, info);
+    return await super.edit(id, utils.deleteEmptyProperty(info));
   }
   /**
    * 删除账户

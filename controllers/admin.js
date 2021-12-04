@@ -123,18 +123,6 @@ admin.edit_admin = async (ctx, next) => {
     return next();
   }
 
-  if(regular.isEmpty(username) && !regular.isRegisterUserName(username)){
-    ctx.code = 10001;
-    ctx.msg = "用户名不能为空";
-    return next();
-  }
-
-  if(regular.isEmpty(phone) && !regular.isMobile(phone)){
-    ctx.code = 10001;
-    ctx.msg = "手机号不正确";
-    return next();
-  }
-
   const info = {username, phone, name, avatar, role_id, expire_time, status};
 
   const rs = await adminAction.uploadUserInfo(id, info);

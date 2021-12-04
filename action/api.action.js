@@ -2,7 +2,9 @@ const Mysql = require("../lib/mysql");
 const config = require("../config");
 const base = config.mysql.base + "api";
 const DB = new Mysql(base);
-const ApiModel = require("../models/api.model")(DB);
+const Api = require("../models/api.model");
+const ApiModel = new Api(DB)
+const BaseAction = require("./base.action.class");
 
 /*
  * list 结构转 树型
@@ -26,22 +28,24 @@ const treeMap = (menuTree, tree, parentId) => {
     }
   });
 };
-
-const ApiAction = {
+class ApiAction extends BaseAction {
+  constructor(model) {
+    super(model);
+  }
   /**
    * 验证接口是否开启
    * @param {接口名称} name
    * @returns
    */
-  checkState: async (name) => {
-    const row = await ApiModel.getState(name);
+  async checkState(name) {
+    const row = await this.Model.getState(name);
     return row.status ? true : false;
-  },
+  }
   /**
    * 获取接口title
    * @returns
    */
-  getEnTitles: async () => {
+  async getEnTitles() {
     const info = {
       tableName: base,
       whereJson: {
@@ -58,13 +62,13 @@ const ApiAction = {
         ],
       },
     };
-    return await ApiModel.getByApiJson(info);
-  },
+    return await this.Model.getByApiJson(info);
+  }
   /**
    * 获取接口name
    * @returns
    */
-  getEnNames: async () => {
+  async getEnNames() {
     const info = {
       tableName: base,
       whereJson: {
@@ -81,13 +85,13 @@ const ApiAction = {
         ],
       },
     };
-    return await ApiModel.getByApiJson(info);
-  },
+    return await this.Model.getByApiJson(info);
+  }
   /**
    * 获取api白名单
    * @returns
    */
-  getWhite: async () => {
+  async getWhite() {
     const info = {
       tableName: base,
       whereJson: {
@@ -104,59 +108,94 @@ const ApiAction = {
         ],
       },
     };
-    return await ApiModel.getByApiJson(info);
-  },
+    return await this.Model.getByApiJson(info);
+  }
   /**
    * 获取全局路由
    * @returns
    */
-  getAllRouter: async () => {
-    const data = await ApiModel.getRouterAll();
+  async getAllRouter() {
+    const data = await this.Model.getRouterAll();
     const addRouter = [];
     treeMap(data, addRouter, null);
     return addRouter;
-  },
+  }
   /**
    * 获取API 一级 JSON
    * @param {*} pageIndex
    * @param {*} pageSize
    * @returns
    */
-  getApisJson: async ({ pageIndex, pageSize }) => {
+  async getApisJson({ pageIndex, pageSize }) {
     const info = {
       tableName: base,
       whereJson: {
-        and: [{
-          name: "pid",
-          mark: "is null",
-          key: 'null'
-        }]
+        and: [
+          {
+            name: "pid",
+            mark: "is null",
+            key: "null",
+          },
+        ],
       },
       limitArr: [(pageIndex - 1) * pageSize, pageSize],
     };
 
-    return await ApiModel.fetchAll(info);
-  },
+    return await this.Model.fetchAll(info);
+  }
   /**
    * 获取API 二级 JSON
    * @param {*} pageIndex
    * @param {*} pageSize
    * @returns
    */
-  getApisByJson: async (pid) => {
-    return await ApiModel.getRowsByJson({pid});
-  },
+  async getApisByJson(pid) {
+    return await this.Model.getRowsByJson({ pid });
+  }
   /**
    * 统计数量
    * @param {关键词} keyword
    * @returns
    */
-  countApi: async () => {
+  async countApi() {
     const info = {
       base,
     };
-    return await ApiModel.countAll(info);
-  },
-};
+    return await this.Model.countAll(info);
+  }
+  /**
+   * 添加api
+   * @param {*} info
+   * @returns
+   */
+  async addInfo(info) {
+    return await super.add(utils.deleteEmptyProperty(info));
+  }
+  /**
+   * 账户详情
+   * @param {*} id
+   * @returns
+   */
+  async getInfo(id) {
+    return await super.getInfo(id);
+  }
+  /**
+   * 更新账户
+   * @param {*} id
+   * @param {*} info
+   * @returns
+   */
+  async uploadInfo(id, info) {
+    return await super.edit(id, info);
+  }
+  /**
+   * 删除账户
+   * @param {*} id
+   * @returns
+   */
+  async delInfo(id) {
+    return await super.del(id);
+  }
+}
 
-module.exports = ApiAction;
+module.exports = new ApiAction(ApiModel);

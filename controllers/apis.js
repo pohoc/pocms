@@ -14,10 +14,10 @@ apis.get_apis = async (ctx, next) => {
   const params = { pageIndex, pageSize };
 
   const list = await apiAction.getApisJson(params);
-  list.forEach( async (item, key) => {
-    const data = await apiAction.getApisByJson(item.id)
-    if(data){
-      list[key].children = data
+  list.forEach(async (item, key) => {
+    const data = await apiAction.getApisByJson(item.id);
+    if (data) {
+      list[key].children = data;
     }
   });
   const count = await apiAction.countApi(params);
@@ -34,7 +34,6 @@ apis.info_apis = async (ctx, next) => {
   if (!(await apiAction.checkState("info_apis"))) {
     throw new ForbiddenError();
   }
-
 };
 
 apis.add_apis = async (ctx, next) => {
@@ -42,7 +41,6 @@ apis.add_apis = async (ctx, next) => {
   if (!(await apiAction.checkState("add_apis"))) {
     throw new ForbiddenError();
   }
-
   return next();
 };
 
@@ -52,6 +50,26 @@ apis.edit_apis = async (ctx, next) => {
     throw new ForbiddenError();
   }
 
+  const { name, remark, token, pid, status, id } =
+    ctx.request.body;
+
+  if (!id) {
+    ctx.code = 10001;
+    ctx.msg = "请传递参数";
+    return next();
+  }
+  const info = {name, remark, token, pid, status};
+
+  const rs = await apiAction.uploadInfo(id, info);
+
+  if (rs.affectedRows != 1) {
+    ctx.code = 10002;
+    ctx.msg = "更新失败";
+    return next();
+  }
+
+  ctx.msg = "更新成功";
+  ctx.result = true;
   return next();
 };
 
