@@ -5,6 +5,7 @@ const DB = new Mysql(base);
 const Api = require("../models/api.model");
 const ApiModel = new Api(DB)
 const BaseAction = require("./base.action.class");
+const utils = require("../lib/utils");
 
 /*
  * list 结构转 树型
@@ -186,7 +187,7 @@ class ApiAction extends BaseAction {
    * @returns
    */
   async uploadInfo(id, info) {
-    return await super.edit(id, info);
+    return await super.edit(id, utils.deleteEmptyProperty(info));
   }
   /**
    * 删除账户

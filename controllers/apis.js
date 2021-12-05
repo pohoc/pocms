@@ -59,9 +59,7 @@ apis.edit_apis = async (ctx, next) => {
     return next();
   }
   const info = {name, remark, token, pid, status};
-
   const rs = await apiAction.uploadInfo(id, info);
-
   if (rs.affectedRows != 1) {
     ctx.code = 10002;
     ctx.msg = "更新失败";

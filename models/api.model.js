@@ -96,7 +96,7 @@ class api extends Model {
   }
   async getRowsByJson(where) {
     try {
-      return (res = await this.DB.getChild(where));
+      return await super.getRows(where);
     } catch (err) {
       logger.error(err);
     }
