@@ -34,15 +34,6 @@ account.login = async (ctx, next) => {
 		await action.setTimeRedis(username);
 		ctx.code = 10001;
 		ctx.msg = "用户名或密码错误";
-		// 记入登录日志
-		await logAction.SetInfo({
-			uid: user.id,
-			name: user.username,
-			client: client,
-			type: "login",
-			ip: utils.getClientIP(ctx.req),
-			remark: "登录失败",
-		});
 	} else {
 		delete user.password;
 		// 记入登录日志
