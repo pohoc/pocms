@@ -1,6 +1,4 @@
-const apiState = require("../action/api.action");
 const roleAction = require("../action/role.action");
-const { ForbiddenError } = require("../lib/error");
 const role = {};
 
 role.get_role = async (ctx, next) => {

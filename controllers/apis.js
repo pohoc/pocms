@@ -1,5 +1,4 @@
 const apiAction = require("../action/api.action");
-const { ForbiddenError } = require("../lib/error");
 const apis = {};
 
 apis.get_apis = async (ctx, next) => {

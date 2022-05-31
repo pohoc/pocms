@@ -1,11 +1,16 @@
-const apiState = require("../action/api.action");
 const adminAction = require("../action/admin.action");
 const accountAction = require("../action/account.action");
-const { ForbiddenError } = require("../lib/error");
+const roleAction = require("../action/role.action");
 const regular = require("../lib/regular");
 const { onFileDefault } = require("../lib/upload");
 const admin = {};
 
+/**
+ * 系统用户列表
+ * @param {*} ctx
+ * @param {*} next
+ * @returns
+ */
 admin.get_admin = async (ctx, next) => {
 	const { page = 1, size = 10, username, phone, status } = ctx.request.query;
 	const pageIndex = parseInt(page);
@@ -26,6 +31,12 @@ admin.get_admin = async (ctx, next) => {
 	return next();
 };
 
+/**
+ * 系统用户详情
+ * @param {*} ctx
+ * @param {*} next
+ * @returns
+ */
 admin.info_admin = async (ctx, next) => {
 	const { id } = ctx.request.query;
 	if (!id) {
@@ -43,6 +54,12 @@ admin.info_admin = async (ctx, next) => {
 	return next();
 };
 
+/**
+ * 添加系统用户
+ * @param {*} ctx
+ * @param {*} next
+ * @returns
+ */
 admin.add_admin = async (ctx, next) => {
 	const { username, password, phone, name, expire_time, avatar, role_id } =
 		ctx.request.body;
@@ -99,6 +116,12 @@ admin.add_admin = async (ctx, next) => {
 	return next();
 };
 
+/**
+ * 编辑系统用户
+ * @param {*} ctx
+ * @param {*} next
+ * @returns
+ */
 admin.edit_admin = async (ctx, next) => {
 	const { username, phone, name, avatar, role_id, expire_time, status, id } =
 		ctx.request.body;
@@ -124,6 +147,12 @@ admin.edit_admin = async (ctx, next) => {
 	return next();
 };
 
+/**
+ * 删除系统用户
+ * @param {*} ctx
+ * @param {*} next
+ * @returns
+ */
 admin.del_admin = async (ctx, next) => {
 	const { id } = ctx.request.body;
 	if (!id) {
@@ -149,6 +178,12 @@ admin.del_admin = async (ctx, next) => {
 	return next();
 };
 
+/**
+ * 上传系统用户头像
+ * @param {*} ctx
+ * @param {*} next
+ * @returns
+ */
 admin.upload_admin = async (ctx, next) => {
 	if (!ctx.request.files) {
 		ctx.code = 10001;
@@ -162,6 +197,26 @@ admin.upload_admin = async (ctx, next) => {
 	ctx.result = {
 		file: fileName,
 	};
+	return next();
+};
+
+/**
+ * 系统用户角色
+ * @param {*} ctx
+ * @param {*} next
+ */
+admin.role_admin = async (ctx, next) => {
+	const role = await roleAction.getRows({ status: 1 });
+	const roleAdmin = [];
+	if (role.length > 0)
+		role.forEach((item) => {
+			const roles = { title: item.title, value: item.id, key: item.id };
+			if (item.id == 0) {
+				roles.disabled = true;
+			}
+			roleAdmin.push(roles);
+		});
+	ctx.result = roleAdmin;
 	return next();
 };
 
