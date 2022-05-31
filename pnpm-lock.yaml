@@ -6,6 +6,7 @@ specifiers:
   crypto-js: ^4.1.1
   dotenv: ^10.0.0
   glob: ^7.1.7
+  js-md5: ^0.7.3
   jsonwebtoken: ^8.5.1
   koa: ^2.6.2
   koa-art-template: ^1.1.1
@@ -31,6 +32,7 @@ dependencies:
   crypto-js: registry.npmmirror.com/crypto-js/4.1.1
   dotenv: registry.npmmirror.com/dotenv/10.0.0
   glob: registry.npmmirror.com/glob/7.2.3
+  js-md5: registry.npmmirror.com/js-md5/0.7.3
   jsonwebtoken: registry.npmmirror.com/jsonwebtoken/8.5.1
   koa: registry.npmmirror.com/koa/2.13.4
   koa-art-template: registry.npmmirror.com/koa-art-template/1.1.1_art-template@4.13.2
@@ -826,6 +828,12 @@ packages:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/isarray/-/isarray-1.0.0.tgz}
     name: isarray
     version: 1.0.0
+    dev: false
+
+  registry.npmmirror.com/js-md5/0.7.3:
+    resolution: {integrity: sha512-ZC41vPSTLKGwIRjqDh8DfXoCrdQIyBgspJVPXHBGu4nZlAEvG3nf+jO9avM9RmLiGakg7vz974ms99nEV0tmTQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/js-md5/-/js-md5-0.7.3.tgz}
+    name: js-md5
+    version: 0.7.3
     dev: false
 
   registry.npmmirror.com/js-tokens/3.0.2:

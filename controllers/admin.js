@@ -7,10 +7,6 @@ const { onFileDefault } = require("../lib/upload");
 const admin = {};
 
 admin.get_admin = async (ctx, next) => {
-	// 校验接口是否开启
-	if (!(await apiState.checkState("get_admin"))) {
-		throw new ForbiddenError();
-	}
 	const { page = 1, size = 10, username, phone, status } = ctx.request.query;
 	const pageIndex = parseInt(page);
 	const pageSize = parseInt(size);
@@ -31,10 +27,6 @@ admin.get_admin = async (ctx, next) => {
 };
 
 admin.info_admin = async (ctx, next) => {
-	// 校验接口是否开启
-	if (!(await apiState.checkState("info_admin"))) {
-		throw new ForbiddenError();
-	}
 	const { id } = ctx.request.query;
 	if (!id) {
 		ctx.code = 10001;
@@ -52,10 +44,6 @@ admin.info_admin = async (ctx, next) => {
 };
 
 admin.add_admin = async (ctx, next) => {
-	// 校验接口是否开启
-	if (!(await apiState.checkState("add_admin"))) {
-		throw new ForbiddenError();
-	}
 	const { username, password, phone, name, expire_time, avatar, role_id } =
 		ctx.request.body;
 
@@ -112,11 +100,6 @@ admin.add_admin = async (ctx, next) => {
 };
 
 admin.edit_admin = async (ctx, next) => {
-	// 校验接口是否开启
-	if (!(await apiState.checkState("edit_admin"))) {
-		throw new ForbiddenError();
-	}
-
 	const { username, phone, name, avatar, role_id, expire_time, status, id } =
 		ctx.request.body;
 
@@ -142,16 +125,20 @@ admin.edit_admin = async (ctx, next) => {
 };
 
 admin.del_admin = async (ctx, next) => {
-	// 校验接口是否开启
-	if (!(await apiState.checkState("del_admin"))) {
-		throw new ForbiddenError();
-	}
 	const { id } = ctx.request.body;
 	if (!id) {
 		ctx.code = 10001;
 		ctx.msg = "请传递参数";
 		return next();
 	}
+
+	const user = await adminAction.getInfoByJson(id);
+	if (user.role_id === 0) {
+		ctx.code = 10001;
+		ctx.msg = "系统用户禁止删除";
+		return next();
+	}
+
 	const info = await adminAction.delUserInfo(id);
 	if (!info.affectedRows) {
 		ctx.code = 10001;
@@ -163,11 +150,6 @@ admin.del_admin = async (ctx, next) => {
 };
 
 admin.upload_admin = async (ctx, next) => {
-	// 校验接口是否开启
-	if (!(await apiState.checkState("upload_admin"))) {
-		throw new ForbiddenError();
-	}
-
 	if (!ctx.request.files) {
 		ctx.code = 10001;
 		ctx.msg = "上传失败";
