@@ -3,6 +3,7 @@ const accountAction = require("../action/account.action");
 const roleAction = require("../action/role.action");
 const regular = require("../lib/regular");
 const { onFileDefault } = require("../lib/upload");
+const utils = require("../lib/utils");
 const admin = {};
 
 /**
@@ -50,6 +51,7 @@ admin.info_admin = async (ctx, next) => {
 		ctx.msg = "未获取到用户信息";
 	}
 	delete info.password;
+	info.role = info.role.split(",").map(Number);
 	ctx.result = info;
 	return next();
 };
@@ -61,7 +63,7 @@ admin.info_admin = async (ctx, next) => {
  * @returns
  */
 admin.add_admin = async (ctx, next) => {
-	const { username, password, phone, name, expire_time, avatar, role_id } =
+	const { username, password, phone, name, expire_time, avatar, role } =
 		ctx.request.body;
 
 	if (!username && !password && !phone && !name) {
@@ -102,7 +104,7 @@ admin.add_admin = async (ctx, next) => {
 		name,
 		expire_time,
 		avatar,
-		role_id,
+		role: role.join(","),
 		add_time: Math.round(new Date() / 1000),
 	});
 	if (!info.insertId) {
@@ -123,7 +125,7 @@ admin.add_admin = async (ctx, next) => {
  * @returns
  */
 admin.edit_admin = async (ctx, next) => {
-	const { username, phone, name, avatar, role_id, expire_time, status, id } =
+	const { username, phone, name, avatar, role, expire_time, status, id } =
 		ctx.request.body;
 
 	if (!id) {
@@ -132,7 +134,15 @@ admin.edit_admin = async (ctx, next) => {
 		return next();
 	}
 
-	const info = { username, phone, name, avatar, role_id, expire_time, status };
+	const info = {
+		username,
+		phone,
+		name,
+		avatar,
+		role: role.join(","),
+		expire_time,
+		status,
+	};
 
 	const rs = await adminAction.uploadUserInfo(id, info);
 
@@ -210,7 +220,7 @@ admin.role_admin = async (ctx, next) => {
 	const roleAdmin = [];
 	if (role.length > 0)
 		role.forEach((item) => {
-			const roles = { title: item.title, value: item.id, key: item.id };
+			const roles = { title: item.title, value: item.id };
 			if (item.id == 0) {
 				roles.disabled = true;
 			}
@@ -220,8 +230,27 @@ admin.role_admin = async (ctx, next) => {
 	return next();
 };
 
+/**
+ * 重置密码
+ * @param {*} ctx
+ * @param {*} next
+ * @returns
+ */
 admin.pass_admin = async (ctx, next) => {
 	const { id } = ctx.request.body;
+	const pass = utils.randomNumber(8);
+	const password = accountAction.cryptPass(pass);
+	const rs = await adminAction.uploadUserInfo(id, { password });
+	if (rs.affectedRows != 1) {
+		ctx.code = 10002;
+		ctx.msg = "重置失败";
+		return next();
+	}
+
+	ctx.msg = "重置成功";
+	ctx.result = {
+		pass,
+	};
 	return next();
 };
 

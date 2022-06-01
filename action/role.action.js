@@ -7,18 +7,28 @@ const RoleModel = new Role(DB);
 const BaseAction = require("./base.action.class");
 
 class RoleAction extends BaseAction {
-  constructor(model) {
-    super(model);
-  }
-  /**
-   * 获取用户路由权限
-   * @param {接口名称} name
-   * @returns
-   */
-  async getRoleInfoJson(id) {
-    const where = `SELECT per.* FROM po_admin su JOIN po_role_permission ro on su.role_id=ro.role_id or su.id=ro.admin_id JOIN po_permission per on ro.permission_id = per.id and su.id=${id}`;
-    return await this.Model.roleJson(where);
-  }
+	constructor(model) {
+		super(model);
+	}
+	/**
+	 * 获取用户路由权限
+	 * @param {接口名称} name
+	 * @returns
+	 */
+	async getRoleInfoJson(id) {
+		const where = `SELECT * FROM po_permission WHERE find_in_set(id,(SELECT role.permission_id FROM po_admin admin JOIN po_role_permission role ON role.role_id in (admin.role) AND admin.id=${id}))`;
+		return await this.Model.roleJson(where);
+	}
+
+	/**
+	 * 获取指定用户角色
+	 * @param {*} str
+	 * @returns
+	 */
+	async getAdminRoleName(str) {
+		const where = `SELECT title FROM po_role WHERE id in (${str})`;
+		return await super.queryArr(where);
+	}
 }
 
 module.exports = new RoleAction(RoleModel);
