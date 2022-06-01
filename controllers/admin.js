@@ -220,4 +220,9 @@ admin.role_admin = async (ctx, next) => {
 	return next();
 };
 
+admin.pass_admin = async (ctx, next) => {
+	const { id } = ctx.request.body;
+	return next();
+};
+
 module.exports = admin;
