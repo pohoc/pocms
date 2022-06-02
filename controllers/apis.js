@@ -24,12 +24,6 @@ apis.get_apis = async (ctx, next) => {
 	return next();
 };
 
-apis.info_apis = async (ctx, next) => {};
-
-apis.add_apis = async (ctx, next) => {
-	return next();
-};
-
 apis.edit_apis = async (ctx, next) => {
 	const { name, remark, token, pid, status, id } = ctx.request.body;
 
@@ -48,16 +42,6 @@ apis.edit_apis = async (ctx, next) => {
 
 	ctx.msg = "更新成功";
 	ctx.result = true;
-	return next();
-};
-
-apis.del_apis = async (ctx, next) => {
-	return next();
-};
-
-apis.parent_apis = async (ctx, next) => {
-	const list = await apiAction.getAllApiParent();
-	ctx.result = list;
 	return next();
 };
 
