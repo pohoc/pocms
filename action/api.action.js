@@ -199,7 +199,7 @@ class ApiAction extends BaseAction {
 		return await super.add(utils.deleteEmptyProperty(info));
 	}
 	/**
-	 * 账户详情
+	 * api详情
 	 * @param {*} id
 	 * @returns
 	 */
@@ -207,7 +207,7 @@ class ApiAction extends BaseAction {
 		return await super.getInfo(id);
 	}
 	/**
-	 * 更新账户
+	 * 更新api
 	 * @param {*} id
 	 * @param {*} info
 	 * @returns
@@ -216,12 +216,17 @@ class ApiAction extends BaseAction {
 		return await super.edit(id, utils.deleteEmptyProperty(info));
 	}
 	/**
-	 * 删除账户
+	 * 删除api
 	 * @param {*} id
 	 * @returns
 	 */
 	async delInfo(id) {
 		return await super.del(id);
+	}
+
+	async getAllApiParent() {
+		const where = `SELECT id, name FROM ${base} WHERE pid is null`;
+		return await super.queryArr(where);
 	}
 }
 

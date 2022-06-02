@@ -55,4 +55,10 @@ apis.del_apis = async (ctx, next) => {
 	return next();
 };
 
+apis.parent_apis = async (ctx, next) => {
+	const list = await apiAction.getAllApiParent();
+	ctx.result = list;
+	return next();
+};
+
 module.exports = apis;
